@@ -1,0 +1,26 @@
+{
+  "name": "drash-ltd",
+  "version": "1.0.0",
+  "description": "Drash company",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azhi99/drash-ltd.git"
+  },
+  "author": "Suly Tech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azhi99/drash-ltd/issues"
+  },
+  "homepage": "https://github.com/Azhi99/drash-ltd#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.12",
+    "mysql": "^2.18.1"
+  }
+}

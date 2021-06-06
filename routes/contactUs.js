@@ -24,8 +24,8 @@ router.patch('/updateContact/:cu_id', async(req,res) => {
             phone: req.body.phone,
             address: req.body.address,
             email: req.body.email,
-            fb_link: req.body.fb_link,
-            insta_link: req.body.insta_link
+            fb_link: req.body.fb_link || null,
+            insta_link: req.body.insta_link || null
         })
 
         return res.status(200).send()

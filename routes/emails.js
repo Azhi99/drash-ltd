@@ -10,10 +10,10 @@ router.post('/addEmail', async(req,res) => {
             email: req.body.email,
             description: req.body.description,
             recived_date: new Date().toISOString().split('T')[0],
-            seen_status: req.body.seen_status
+            seen_status: '0'
         })
 
-        return res.status(200).send()
+        return res.sendStatus(200)
     } catch (error) {
         return res.status(500).send(error)
     }
@@ -46,14 +46,10 @@ router.delete('/deleteEmail/:e_id', async(req,res) => {
 })
 
 router.get('/allEmails', async(req,res) => {
-    try {
-        const allEmails = await db('tbl_emails').select('*')
-         return res.status(200).json({
-             allEmails
-         })
-    } catch (error) {
-        
-    }
+    const allEmails = await db('tbl_emails').select('*')
+    return res.status(200).json({
+        allEmails
+    })
 })
 
 module.exports = router

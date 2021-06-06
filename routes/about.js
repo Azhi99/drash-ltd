@@ -24,7 +24,7 @@ router.patch('/updateAbout/:au_id', async(req,res) => {
             desc_ar: req.body.desc_ar
         })
 
-        return res.status(200).send()
+        return res.sendStatus(200)
     } catch (error) {
         return res.status(500).send(error)
     }

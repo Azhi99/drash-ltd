@@ -15,6 +15,11 @@ router.post('/addEmail', async(req,res) => {
 
         return res.sendStatus(200)
     } catch (error) {
+        if(error.errno == 1062) {
+            return res.status(500).send({
+                message: 'The email was previously sent'
+            })
+        }
         return res.status(500).send(error)
     }
 })

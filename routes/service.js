@@ -71,4 +71,50 @@ router.patch('/updateImage/:s_id', (req, res) => {
     });
 });
 
+router.patch('/updateService/:s_id', async (req, res) => {
+    try {
+        await db('tbl_services').where('s_id', req.params.s_id).update({
+            title_en: req.body.title_en,
+            title_ku: req.body.title_ku,
+            title_ar: req.body.title_ar,
+            desc_en: req.body.desc_en,
+            desc_ku: req.body.desc_ku,
+            desc_ar: req.body.desc_ar,
+        });
+        return res.sendStatus(200);
+    } catch (error) {
+        return res.status(500).send({
+            error
+        });
+    }
+});
+
+router.delete('/deleteService/:s_id', async (req, res) => {
+    try {
+        const [{image}] = await db('tbl_services').where('s_id', req.params.s_id).select(['image_path as image']);
+        await db('tbl_services').where('s_id', req.params.s_id).delete();
+        fs.unlinkSync('./public/' + image.slice(1));
+        return res.sendStatus(200);
+    } catch (error) {
+        return res.status(500).send({
+            error
+        });
+    }
+});
+
+router.get('/getServices/:lang', async (req, res) => {
+    if(['en', 'ku', 'ar'].includes(req.params.lang)){
+        const services = await db('tbl_services').select([
+            's_id',
+            'title_' + req.params.lang,
+            'desc_' + req.params.lang,
+            'image_path'
+        ]);
+        return res.status(200).send(services);
+    }
+    return res.status(404).send({
+        message: 'Not found'
+    });
+});
+
 module.exports = router;

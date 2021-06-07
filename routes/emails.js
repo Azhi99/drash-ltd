@@ -51,10 +51,10 @@ router.delete('/deleteEmail/:e_id', async(req,res) => {
 })
 
 router.get('/allEmails', async(req,res) => {
-    const allEmails = await db('tbl_emails').select('*')
-    return res.status(200).json({
+    const allEmails = await db('tbl_emails').select('*').orderBy('e_id', 'desc');
+    return res.status(200).send({
         allEmails
-    })
-})
+    });
+});
 
 module.exports = router

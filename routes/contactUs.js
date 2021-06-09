@@ -43,6 +43,9 @@ router.delete('/deleteContact/:cu_id', async(req,res) => {
     }
 })
 
-
+router.get('/getContact', async (req, res) => {
+    const [contact] = await db('tbl_contact_us').select('*').limit(1);
+    return res.status(200).send(contact);
+});
 
 module.exports = router

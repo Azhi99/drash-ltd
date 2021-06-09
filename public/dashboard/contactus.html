@@ -36,39 +36,39 @@
                 <label class="mt-1"> Phones: </label>
             </div>
             <div class="col-xl-11 col-md-11 col-sm-12 mb-2">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="phones">
             </div>
 
             <div class="col-xl-1 col-md-1 col-sm-12 mb-2">
                 <label class="mt-1"> Address: </label>
             </div>
             <div class="col-xl-11 col-md-11 col-sm-12 mb-2">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="address">
             </div>
 
             <div class="col-xl-1 col-md-1 col-sm-12 mb-2">
                 <label class="mt-1"> E-Mail: </label>
             </div>
             <div class="col-xl-11 col-md-11 col-sm-12 mb-2">
-                <input type="email" class="form-control">
+                <input type="email" class="form-control" id="email">
             </div>
 
             <div class="col-xl-1 col-md-1 col-sm-12 mb-2">
                 <label class="mt-1"> Facebook: </label>
             </div>
             <div class="col-xl-11 col-md-11 col-sm-12 mb-2">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="fb_link">
             </div>
 
             <div class="col-xl-1 col-md-1 col-sm-12 mb-2">
                 <label class="mt-1"> Instagram: </label>
             </div>
             <div class="col-xl-11 col-md-11 col-sm-12 mb-2">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="insta_link">
             </div>
             
             <div class="col-12 mb-2">
-                <button class="btn btn-primary btn-block"> Save changes &nbsp; <i class="fa fa-save"></i> </button>
+                <button class="btn btn-primary btn-block" id="btnSave" onclick="saveChanges()"> Save changes &nbsp; <i class="fa fa-save"></i> </button>
             </div>
 
         </div>
@@ -78,6 +78,50 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+
+        function getData() {
+            axios.get('/contactUs/getContact').then(({data}) => {
+                $("#phones").val(data.phones);
+                $("#address").val(data.address);
+                $("#email").val(data.email);
+                $("#fb_link").val(data.fb_link);
+                $("#insta_link").val(data.insta_link);
+            });
+        }
+
+        function saveChanges() {
+            const phones = $("#phones").val();
+            const address = $("#address").val();
+            const email = $("#email").val();
+            const fb_link = $("#fb_link").val();
+            const insta_link = $("#insta_link").val();
+
+            if(phones && address && email) {
+                document.getElementById('btnSave').setAttribute('disabled', 'disabled');
+                axios.patch('/contactUs/updateContact/1', {
+                    phones,
+                    address,
+                    email,
+                    fb_link,
+                    insta_link
+                }).then(() => {
+                    alert("Successfully updated");
+                }).finally(() => {
+                    document.getElementById('btnSave').removeAttribute('disabled');
+                });
+            } else {
+                alert("Fill phones, address and email");
+            }
+        }
+
+        $(document).ready(() => {
+            getData();
+        });
+
+    </script>
 
 </body>
 </html>

@@ -54,7 +54,7 @@
             </div>
 
             <div class="col-12 mt-3 mb-3">
-                <button class="btn btn-primary btn-block" onclick="saveChanges()"> Save changes &nbsp; <i class="fa fa-save"></i> </button>
+                <button class="btn btn-primary btn-block" id="btnSave" onclick="saveChanges()"> Save changes &nbsp; <i class="fa fa-save"></i> </button>
             </div>
             
         </div>
@@ -81,12 +81,15 @@
             var desc_ar = $("#descAR").val();
             var desc_ku = $("#descKU").val();
             if(desc_en && desc_ar && desc_ku) {
+                document.getElementById('btnSave').setAttribute('disabled', 'disabled');
                 axios.patch("/aboutUs/updateAbout/1", {
                     desc_en,
                     desc_ar,
                     desc_ku
                 }).then(() => {
                     alert("Successfully Saved");
+                }).finally(() => {
+                    document.getElementById('btnSave').remove('disabled');
                 });
             } else {
                 alert('Fill all informations');

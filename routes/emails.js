@@ -41,6 +41,19 @@ router.patch('/updateEmail/:e_id', async(req,res) => {
     }
 })
 
+router.patch('/seeEmail/:e_id', async (req, res) => {
+    try {
+        await db('tbl_emails').where('e_id', req.params.e_id).update({
+            seen_status: '1'
+        });
+        return res.sendStatus(200);
+    } catch (error) {
+        return res.status(500).send({
+            error
+        });
+    }
+});
+
 router.delete('/deleteEmail/:e_id', async(req,res) => {
     try {
         await db('tbl_emails').where('e_id', req.params.e_id).delete()
@@ -52,9 +65,24 @@ router.delete('/deleteEmail/:e_id', async(req,res) => {
 
 router.get('/allEmails', async(req,res) => {
     const allEmails = await db('tbl_emails').select('*').orderBy('e_id', 'desc');
+    return res.status(200).send(allEmails);
+});
+
+router.get('/getEmailDetail/:e_id', async (req, res) => {
+    const [detail] = await db('tbl_emails').where('e_id', req.params.e_id).select('*');
+    return res.status(200).send(detail);
+});
+
+router.get('/countNewEmails', async (req, res) => {
+    const [{newEmails}] = await db('tbl_emails').where('seen_status', '0').count('* as newEmails');
     return res.status(200).send({
-        allEmails
+        newEmails
     });
+});
+
+router.get('/getEmailsByDate/:date', async (req, res) => {
+    const allEmails = await db('tbl_emails').where('recived_date', req.params.date).select('*').orderBy('e_id', 'desc');
+    return res.status(200).send(allEmails);
 });
 
 module.exports = router

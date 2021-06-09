@@ -33,15 +33,14 @@
 
         <div class="row mt-2">
             <div class="col-xl-10 col-md-10 col-sm-12 mb-2">
-                <input type="file" class="form-control" accept="image/*">
+                <input type="file" class="form-control" accept="image/*" id="imageFile">
             </div>
             <div class="col-xl-2 col-md-2 col-sm-12 mb-2">
-                <button class="btn btn-primary btn-block"> Upload &nbsp; <i class="fa fa-upload"></i> </button>
+                <button class="btn btn-primary btn-block" onclick="upload()"> Upload &nbsp; <i class="fa fa-upload"></i> </button>
             </div>
             
         </div>
-        <div class="row mt-2">
-            
+        <div class="row mt-2" id="images">
             
         </div>
 
@@ -50,6 +49,67 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+
+        function getData() {
+            axios.get('/certificates/getData').then(({data}) => {
+                data.forEach(image => {
+                    var name = image.image_path.split('/')[2];
+                    const img = document.createElement('div');
+                    
+                    img.classList.add('col-xl-6');
+                    img.classList.add('col-md-6');
+                    img.classList.add('col-sm-12');
+                    img.style.setProperty('background-image', "url('/certificates/images/"+name+"')");
+                    img.style.setProperty('background-size', 'contain');
+                    img.style.setProperty('background-repeat', 'no-repeat');
+                    img.style.setProperty('min-height', '250px');
+                    img.setAttribute('id', 'image' + image.c_id);
+                    
+                    const btn = document.createElement('button');
+                    const i = document.createElement('i');
+                    i.classList.add('fa');
+                    i.classList.add('fa-trash');
+                    btn.append(i);
+                    btn.classList.add('btn');
+                    btn.classList.add('btn-danger');
+                    btn.classList.add('btn-sm');
+                    btn.setAttribute('onclick', "deleteImage("+ image.c_id +")");
+                    img.append(btn);
+
+                    $("#images").append(img);
+                });
+            });
+        }
+
+        function deleteImage(c_id) {
+            const c = confirm("Are you sure delete this image ?");
+            if(c) {
+                axios.delete('/certificates/deleteCertificate/' + c_id).then(() => {
+                    document.getElementById('image' + c_id).remove();
+                });
+            }
+        }
+
+        function upload() {
+            const file = document.getElementById('imageFile').files[0];
+            if(file) {
+                var f = new FormData();
+                f.append('certificateImage', file);
+                axios.post('/certificates/addCertificate', f).then(() => {
+                    window.location.reload();
+                });
+            } else {
+                alert('Please select a file');
+            }
+        }
+
+        $(document).ready(() => {
+            getData();
+        });
+    </script>
 
 </body>
 </html>

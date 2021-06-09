@@ -52,4 +52,13 @@ router.delete('/deleteCertificate/:c_id', async (req, res) => {
     }
 });
 
+router.get('/getData', async (req, res) => {
+    const images = await db('tbl_certificates').select('*').orderBy('c_id', 'desc');
+    return res.status(200).send(images);
+});
+
+router.get('/images/:name', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/certificateImages/'+req.params.name))
+})
+
 module.exports = router;

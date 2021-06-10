@@ -14,7 +14,7 @@ const dashboardRouter = require('./routes/dashboard');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 app.use('/users', userRouter);
 app.use('/certificates', certificateRouter);

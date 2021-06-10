@@ -117,4 +117,21 @@ router.get('/getServices/:lang', async (req, res) => {
     });
 });
 
+router.get('/getOneService/:s_id', async (req, res) => {
+    const [service] = await db('tbl_services').where('s_id', req.params.s_id).select([
+        's_id',
+        'title_en',
+        'title_ar',
+        'title_ku',
+        'desc_en',
+        'desc_ar',
+        'desc_ku'
+    ]);
+    return res.status(200).send(service);
+});
+
+router.get('/images/:name', (req, res) => {
+    return res.sendFile(path.join(__dirname, '../public/serviceImages/' + req.params.name));
+});
+
 module.exports = router;

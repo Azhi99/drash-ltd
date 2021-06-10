@@ -73,11 +73,27 @@ router.patch('/activeUser/:u_id', async (req, res) => {
 
 router.delete('/deleteUser/:u_id', async (req, res) => {
     try {
-        await db('tbl_users').where('u_id', req.params.u_id).delete();
-        return res.sendStatus(200);
+        const [{noOfActived}] = await db('tbl_users').where('status', '1').count('* as noOfActived');
+        if(noOfActived > 1) {
+            await db('tbl_users').where('u_id', req.params.u_id).delete();
+            return res.sendStatus(200);
+        }
+        return res.status(500).send({
+            message: 'You can not delete this user'
+        });
     } catch (error) {
         return res.sendStatus(500);
     }
 })
+
+router.get('/getData', async (req, res) => {
+    const users = await db('tbl_users').select('*');
+    return res.status(200).send(users);
+});
+
+router.get('/getSingleUser/:u_id', async (req, res) => {
+    const [user] = await db('tbl_users').where('u_id', req.params.u_id).select('*');
+    return res.status(200).send(user);
+});
 
 module.exports = router;

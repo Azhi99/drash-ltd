@@ -3,6 +3,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const db = require('../db/dbConfig');
+const { checkAuth } = require('../auth');
 const router = express.Router();
 
 const fileStorage = multer.diskStorage({
@@ -24,7 +25,7 @@ const upload = multer({
     }
 }).single('certificateImage');
 
-router.post('/addCertificate', (req, res) => {
+router.post('/addCertificate', checkAuth, (req, res) => {
     upload(req, res, async (err) => {
         if(!err){
             try {
@@ -42,7 +43,7 @@ router.post('/addCertificate', (req, res) => {
     });
 });
 
-router.delete('/deleteCertificate/:c_id', async (req, res) => {
+router.delete('/deleteCertificate/:c_id', checkAuth, async (req, res) => {
     var [{image}] = await db('tbl_certificates').where('c_id', req.params.c_id).select(['image_path as image']);
     image = './public/' + image.slice(1);
     await db('tbl_certificates').where('c_id', req.params.c_id).delete();

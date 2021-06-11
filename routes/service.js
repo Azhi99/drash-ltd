@@ -3,6 +3,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const db = require('../db/dbConfig');
+const { checkAuth } = require('../auth');
 const router = express.Router();
 
 const fileStorage = multer.diskStorage({
@@ -24,7 +25,7 @@ const upload = multer({
     }
 }).single('serviceImage');
 
-router.post('/addService', async (req, res) => {
+router.post('/addService', checkAuth, async (req, res) => {
     upload(req, res, async (err) => {
         if(!err){
             try {
@@ -51,7 +52,7 @@ router.post('/addService', async (req, res) => {
     });
 });
 
-router.patch('/updateImage/:s_id', (req, res) => {
+router.patch('/updateImage/:s_id', checkAuth, (req, res) => {
     upload(req, res, async (err) => {
         if(!err) {
             try {
@@ -71,7 +72,7 @@ router.patch('/updateImage/:s_id', (req, res) => {
     });
 });
 
-router.patch('/updateService/:s_id', async (req, res) => {
+router.patch('/updateService/:s_id', checkAuth, async (req, res) => {
     try {
         await db('tbl_services').where('s_id', req.params.s_id).update({
             title_en: req.body.title_en,
@@ -89,7 +90,7 @@ router.patch('/updateService/:s_id', async (req, res) => {
     }
 });
 
-router.delete('/deleteService/:s_id', async (req, res) => {
+router.delete('/deleteService/:s_id', checkAuth, async (req, res) => {
     try {
         const [{image}] = await db('tbl_services').where('s_id', req.params.s_id).select(['image_path as image']);
         await db('tbl_services').where('s_id', req.params.s_id).delete();

@@ -11,6 +11,9 @@
 <body>
     <div class="container-fluid" id="body" style="display: none;">
         <div class="row py-1" style="background-color: #1eae98;">
+            <div class="col-12 mb-1">
+                <button class="btn btn-danger btn-block" onclick="logout()"> Logout &nbsp; <i class="fa fa-sign-out"></i> </button>
+            </div>
             <div class="col-xl-2 col-md-3 col-sm-4 mb-1">
                 <a href="/dr0a1sh/dashboard" class="text-dark btn btn-light btn-block"> Emails &nbsp; <i class="fa fa-envelope"></i> </a>
             </div>
@@ -104,12 +107,20 @@
 
 
     <script type="text/javascript">
+    
+        function logout() {
+            const c = confirm('Are you sure logout ?');
+            if(c) {
+                localStorage.removeItem('drashToken');
+                location.href = '/';
+            }
+        }
 
-    function clearInformations() {
-        $("#u_id").html(null);
-        $("#username").val(null);
-        $("#password").val(null);
-    }
+        function clearInformations() {
+            $("#u_id").html(null);
+            $("#username").val(null);
+            $("#password").val(null);
+        }
 
         function getData() {
             axios.get('/users/getData').then(({data}) => {

@@ -110,7 +110,7 @@ router.get('/getServices/:lang', async (req, res) => {
             'title_' + req.params.lang,
             'desc_' + req.params.lang,
             'image_path'
-        ]);
+        ]).orderBy('s_id', 'asc');
         return res.status(200).send(services);
     }
     return res.status(404).send({

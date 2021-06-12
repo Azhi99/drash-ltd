@@ -13,6 +13,7 @@ const serviceRouter = require('./routes/service');
 const emailRouter = require('./routes/emails.js')
 const contactRouter = require('./routes/contactUs')
 const aboutRouter = require('./routes/about.js')
+const enRouter = require('./routes/serveEnglish.js')
 
 const dashboardRouter = require('./routes/dashboard');
 
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public/client'));
 
+app.use('/en', enRouter);
 app.use('/users', userRouter);
 app.use('/certificates', certificateRouter);
 app.use('/services', serviceRouter);
@@ -55,6 +57,10 @@ app.post('/login', (req, res) => {
             });
         }
     });
+});
+
+app.get('/', (req, res) => {
+    return res.sendFile(path.join(__dirname, './public/client/en/index.html'));
 });
 
 app.get('/isLogged', (req, res) => {

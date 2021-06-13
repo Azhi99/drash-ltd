@@ -1336,7 +1336,7 @@ Banner Area Style
   position: relative;
   height: 555px;
   overflow: hidden;
-  background-image: url('https://scontent.fisu6-2.fna.fbcdn.net/v/t1.15752-0/p206x206/199566683_1429341474090951_1105871786502570336_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=aee45a&_nc_eui2=AeGyewo78FwjhQSujWsehOxKze7FjoJP4b_N7sWOgk_hv4Y40z_iGmyr6YNkR6LJgpoEXHpDu1al8n1ipp8FzJak&_nc_ohc=eKN1bzgezyMAX8yJm62&_nc_ht=scontent.fisu6-2.fna&tp=6&oh=3fa5d4654d6a4d4df968965a66d94f2a&oe=60CADA81');
+  background-image: url('/en/images/banner/banner-bg-1.jpg');
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;

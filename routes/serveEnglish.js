@@ -1,6 +1,15 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const router = express.Router();
+
+router.get('/:file', (req, res) => {
+    const file = path.join(__dirname, '../public/client/en/' + req.params.file + '.html');
+    if(fs.existsSync(file)){
+        return res.sendFile(file);
+    } 
+    return res.sendFile(path.join(__dirname, '../public/client/404Notfound.html'));
+});
 
 router.get('/:folder/:file', (req, res) => {
     return res.sendFile(path.join(__dirname, '../public/client/en/assets/' + req.params.folder + '/' + req.params.file));

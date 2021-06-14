@@ -14,6 +14,7 @@ const emailRouter = require('./routes/emails.js')
 const contactRouter = require('./routes/contactUs')
 const aboutRouter = require('./routes/about.js')
 const enRouter = require('./routes/serveEnglish.js')
+const kuRouter = require('./routes/serveKurdish.js')
 
 const dashboardRouter = require('./routes/dashboard');
 
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public/client'));
 
 app.use('/en', enRouter);
+app.use('/ku', kuRouter);
 app.use('/users', userRouter);
 app.use('/certificates', certificateRouter);
 app.use('/services', serviceRouter);

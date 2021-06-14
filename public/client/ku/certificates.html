@@ -31,9 +31,9 @@
 		<link rel="stylesheet" href="/ku/css/rtl.css">
 		
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="/ku/images/favicon.png">
+		<link rel="icon" type="image/png" href="assets/images/favicon.png">
 		<!-- Title -->
-		<title>Matro - Transport Logistics HTML Template</title>
+		<title>Drash - LTD Company</title>
     </head>
 
     <body>
@@ -54,12 +54,12 @@
 						<div class="col-lg-6 col-md-6">
 							<ul class="header-left-content">
 								<li>
-									<a href="https://www.facebook.com/" target="_blank">
+									<a href="https://www.facebook.com/" target="_blank" class="fb-link">
 										<i class="ri-facebook-fill"></i>
 									</a>
 								</li>
 								<li>
-									<a href="https://www.instagram.com/" target="_blank">
+									<a href="https://www.instagram.com/" target="_blank" class="insta-link">
 										<i class="ri-instagram-line"></i>
 									</a>
 								</li>
@@ -70,7 +70,7 @@
 							<div class="header-right-content">
 								<div class="languages-switcher">
 									<i class="ri-global-line"></i>
-									<select>
+									<select id="lang">
 										<option value="3">کوردی</option>
 										<option value="1">English</option>	
 										<option value="2">العربيّة</option>
@@ -113,23 +113,21 @@
 									</li>
 									
 									<li class="nav-item">
-										<a href="about.html" class="nav-link">دەربارە</a>
+										<a href="/ku/about" class="nav-link">دەربارە</a>
 									</li>
 
 									<li class="nav-item">
-										<a href="/ku/services" class="nav-link active">
+										<a href="/ku/services" class="nav-link">
 											خزمەتگوزاریەکان 
 										</a>
 									</li>
 
 									<li class="nav-item">
-										<a href="/ku/certificates" class="nav-link">
-											بڕوانامەکان 
-										</a>
+										<a href="javascript:void(0)" class="nav-link active">بڕوانامەکان</a>
 									</li>
 
                                     <li class="nav-item">
-										<a href="/ku/contact" class="nav-link">پەیوەندی</a>
+										<a href="/ku/contact" class="nav-link">دەربارە</a>
 									</li>
                                 </ul>
 
@@ -162,10 +160,10 @@
 						
 						<div class="container">
 							<div class="option-inner">
-								<div class="others-option justify-content-center d-flex align-items-center">
+								<div class="others-option justify-content-center d-flex align-items-center" dir="ltr">
 									<ul>
 										<li>
-											<a href="tel:" class="default-btn phone-link">
+											<a href="tel:" class="default-btn" class="phone-link">
 												<span>
 													<span class="top-phone">  </span>
 													<i class="ri-phone-fill"></i>
@@ -187,7 +185,7 @@
 		<div class="page-title-area">
 			<div class="container">
 				<div class="page-title-content">
-					<h2>خزمەتگوزاریەکان</h2>
+					<h2>بڕوانامەکان</h2>
 
 					<ul>
 						<li>
@@ -196,7 +194,7 @@
 							</a>
 						</li>
 
-						<li class="active">خزمەتگوزاریەکان</li>
+						<li class="active">بڕوانامەکان</li>
 					</ul>
 				</div>
 			</div>
@@ -205,108 +203,188 @@
 				<img src="/ku/images/page-title-shape-1.png" alt="Image">
 			</div>
 			<div class="shape shape-2">
-				<img src="/ku/images/page-title-shape-2.png" alt="Image">
+				<img src="/ku/images/about-img.png" alt="Image" style="width: 485px;">
 			</div>
 		</div>
 		<!-- End Page Title Area -->
 
-		<!-- Start Success Area -->
-		<section class="success-area pt-100 pb-70">
+		<!-- Start Choose Area -->
+		<section class="choose-area pt-100 pb-70">
 			<div class="container">
-				<div class="section-title">
-					<h2>باشترین خزمەتگوزاریەکان پێشکەش دەکەین بە کڕیارەکانمان</h2>
-					<p> کورتەیەک دەربارەی خزمەتگوزاریەکان </p>
-				</div>
-
-				<div class="row">
-					<div class="col-lg-4 col-md-6">
-						<div class="single-success">
-							<i class="flaticon-supply-chain"></i>
-							<h3>Supply chains solutions</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna.</p>
-								
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6">
-						<div class="single-success">
-							<i class="flaticon-internet"></i>
-							<h3>Internet fulfillment</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna.</p>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
-						<div class="single-success">
-							<i class="flaticon-distribution-1"></i>
-							<h3>World freight forwarding</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna.</p>
-						</div>
-					</div>
+				<div class="row align-items-center" id="certificates">
+					
 				</div>
 			</div>
 		</section>
-		<!-- End Success Area -->
+		<!-- End Choose Area -->
 
-		<!-- Start Services Area -->
-		<section class="services-area services-area-style-two bg-color pt-100 pb-70">
+		<!-- Start Counter Area -->
+		<!-- <section class="counter-area bg-color pt-100 pb-70">
 			<div class="container">
-				<div class="section-title">
-					<span>Shipping services</span>
-					<h2>What we can do for you</h2>
-				</div>
+				<div class="counter-bg">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6">
+							<div class="single-counter">
+								<i class="flaticon-new-year"></i>
 
-				<div class="row justify-content-center align-items-center" id="services">
-
-				</div>
-			</div>
-		</section>
-		<!-- End Services Area -->
-
-		<!-- Start Logistics Solutions Area -->
-		<section class="logistics-solutions-area logistics-solutions-area-style-two pt-100 mb-3">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="logistics-solutions">
-							<span>Logistics solutions</span>
-							<h2>We provide the best solution for you</h2>
-
-							<ul>
-								<li>
-									<i class="flaticon-warehouse-1"></i>
-									<h3>Warehouse solutions</h3>
-									<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit amet tincidunt nibh pulvinar.</p>
-								</li>
-
-								<li>
-									<i class="flaticon-warehouse"></i>
-									<h3>Transport and distribution</h3>
-									<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit amet tincidunt nibh pulvinar.</p>
-								</li>
-
-								<li>
-									<i class="flaticon-contract"></i>
-									<h3>Order management</h3>
-									<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit amet tincidunt nibh pulvinar.</p>
-								</li>
-							</ul>
+								<div class="count-title">
+									<h2>
+										<span class="odometer" data-count="30">00</span> 
+									</h2>
+									<h4>Number of years</h4>
+								</div>
+							</div>
 						</div>
-					</div>
 
-					<div class="col-lg-6">
-						<div class="logistics-solutions-img bg-2">
-							<div class="video-button">
-								<a href="https://www.youtube.com/watch?v=cTxCqUwnLg4" class="popup-youtube">
-									<i class="ri-play-fill"></i>
-								</a>
+						<div class="col-lg-3 col-sm-6">
+							<div class="single-counter">
+								<i class="flaticon-bus"></i>
+
+								<div class="count-title">
+									<h2>
+										<span class="odometer" data-count="50">00</span> 
+										<span class="target">+</span>
+									</h2>
+									<h4>Specialist vehicles</h4>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-sm-6">
+							<div class="single-counter">
+								<i class="flaticon-package"></i>
+
+								<div class="count-title">
+									<h2>
+										<span class="odometer" data-count="30">00</span> 
+										<span class="target">K</span>
+									</h2>
+									<h4>Deliveries per year</h4>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-sm-6">
+							<div class="single-counter">
+								<i class="flaticon-rating"></i>
+
+								<div class="count-title">
+									<h2>
+										<span class="odometer" data-count="10">00</span> 
+										<span class="target">K</span>
+									</h2>
+									<h4>Satisfied clients</h4>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- End Logistics Solutions Area -->
+		</section> -->
+		<!-- End Counter Area -->
+
+		<!-- Start Testimonials Area -->
+		<!-- <section class="testimonials-area-style-two pt-100 pb-70">
+			<div class="container">
+				<div class="section-title">
+					<span>Testimonials</span>
+					<h2>What people's say about us</h2>
+				</div>
+
+				<div class="testimonials-slider-two owl-carousel owl-theme">
+					<div class="single-testimonials-box">
+						<div class="testimonials-img">
+							<img src="assets/images/testimonials/testimonials-3.jpg" alt="Image">
+							<div class="testimonials-mane">
+								<h3>Carol Mcdonald</h3>
+								<span>Management</span>
+							</div>
+						</div>
+
+						<ul>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+						</ul>
+
+						<p>“ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum.”</p>
+					</div>
+
+					<div class="single-testimonials-box">
+						<div class="testimonials-img">
+							<img src="assets/images/testimonials/testimonials-4.jpg" alt="Image">
+							<div class="testimonials-mane">
+								<h3>Charles Cooper</h3>
+								<span>Product Manager</span>
+							</div>
+						</div>
+
+						<ul>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+						</ul>
+
+						<p>“ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum.”</p>
+					</div>
+
+					<div class="single-testimonials-box">
+						<div class="testimonials-img">
+							<img src="assets/images/testimonials/testimonials-3.jpg" alt="Image">
+							<div class="testimonials-mane">
+								<h3>Carol Mcdonald</h3>
+								<span>Management</span>
+							</div>
+						</div>
+
+						<ul>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+							<li>
+								<i class="ri-star-fill"></i>
+							</li>
+						</ul>
+
+						<p>“ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum.”</p>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- End Testimonials Area -->
 
 		<!-- Start Footer Area -->
 		<footer class="footer-area bg-color pt-100 pb-70">
@@ -318,7 +396,7 @@
 								<img src="/ku/images/logo.png" alt="Image">
 							</a>
 
-							<p> کورتەیەک </p> 
+							<p> کورتەیەک  </p> 
 
 							<ul class="social-icon">
 								<li>
@@ -341,12 +419,12 @@
 
 							<ul class="address">
 								<li>
-									<span><i class="ri-map-pin-fill"></i> ناونیشان:</span>
+									<span><i class="ri-map-pin-fill"></i> ناونـیـشان:</span>
 									<p id="address"> . </p>
 								</li>
 								<li class="location">
 									<span><i class="ri-phone-fill"></i> ژمارە تەلەفۆن:</span>
-									<a href="tel:" class="phone-link" id="bottom-phone" dir="ltr"> . </a>
+									<a href="tel:" class="phone-link" id="bottom-phone"  dir="ltr"> . </a>
 								</li>
 								<li>
 									<span><i class="ri-mail-fill"></i> ئیـمـەیڵ:</span>
@@ -354,7 +432,7 @@
 								</li>
 							</ul>
 						</div>
-					</div>
+					</div>					
 				</div>
 			</div>
 		</footer>
@@ -379,8 +457,7 @@
 		<!-- End Go Top Area -->
 		
 
-        <!-- Jquery Min JS -->
-        <script src="/ku/js/jquery.min.js"></script> 
+		<script src="/ku/js/jquery.min.js"></script> 
         <!-- Bootstrap Bundle Min JS -->
         <script src="/ku/js/bootstrap.bundle.min.js"></script>
         <!-- Meanmenu Min JS -->
@@ -408,21 +485,11 @@
 
 		<script type="text/javascript">
 			function getData() {
-				axios.get('/services/getServices/ku').then(({data}) => {
-					data.forEach(service => {
-						$("#services").append(`
-							<div class="col-lg-3 col-sm-6">
-								<div class="single-services-box">
-									<a href="javascript:void(0)">
-										<img src="/services/images/${service.image_path.split("/")[2]}" alt="Images" width="550" height="400">
-									</a>
-									<h3>
-										<a href="javascript:void(0)">
-											${service.title_ku}
-										</a>
-									</h3>
-									<p>${service.desc_ku}</p>
-								</div>
+				axios.get('/certificates/getData').then(({data}) => {
+					data.forEach(image => {
+						$("#certificates").append(`
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<img src="/certificates/images/${image.image_path.split('/')[2]}" style="height: 400px !important;">
 							</div>
 						`);
 					});
@@ -438,6 +505,11 @@
 					$("#email").text(data.email);
 				});
 
+			}
+
+			function changeLanguage() {
+				const lang = $("#lang").val();
+				location.href = ['/en/', '/ar/', '/ku/'][lang];
 			}
 
 			$(document).ready(() => {

@@ -1,3 +1,12 @@
+@font-face {
+  font-family: nrt;
+  src: url('/ku/fonts/NRT-Reg.ttf');
+}
+
+* {
+  font-family: nrt !important;
+}
+
 .top-header .header-right-content {
   float: left;
 }

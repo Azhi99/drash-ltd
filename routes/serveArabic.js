@@ -4,7 +4,7 @@ const fs = require('fs');
 const router = express.Router();
 
 router.get('/:file', (req, res) => {
-    const file = path.join(__dirname, '../public/client/ku/' + req.params.file + '.html');
+    const file = path.join(__dirname, '../public/client/ar/' + req.params.file + '.html');
     if(fs.existsSync(file)){
         return res.sendFile(file);
     } 
@@ -12,11 +12,11 @@ router.get('/:file', (req, res) => {
 });
 
 router.get('/:folder/:file', (req, res) => {
-    return res.sendFile(path.join(__dirname, '../public/client/ku/assets/' + req.params.folder + '/' + req.params.file));
+    return res.sendFile(path.join(__dirname, '../public/client/ar/assets/' + req.params.folder + '/' + req.params.file));
 });
 
 router.get('/:folder/:subFolder/:file', (req, res) => {
-    return res.sendFile(path.join(__dirname, '../public/client/ku/assets/' + req.params.folder + '/' + req.params.subFolder + '/' + req.params.file));
+    return res.sendFile(path.join(__dirname, '../public/client/ar/assets/' + req.params.folder + '/' + req.params.subFolder + '/' + req.params.file));
 });
 
 module.exports = router;

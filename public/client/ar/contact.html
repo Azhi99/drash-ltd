@@ -446,6 +446,11 @@
 				});
 			}
 
+			function changeLanguage() {
+				const lang = $("#lang").val();
+				location.href = ['/en/', '/ar/', '/ku/'][lang];
+			}
+
 			$(document).ready(() => {
 				getData();
 

@@ -69,9 +69,9 @@
 								<div class="languages-switcher">
 									<i class="ri-global-line"></i>
 									<select id="lang" onchange="changeLanguage()">
-										<option value="1">English</option>	
-										<option value="2">العربية</option>
-										<option value="3">کوردی</option>
+										<option value="0">English</option>	
+										<option value="1">العربية</option>
+										<option value="2">کوردی</option>
 									</select>
 								</div>
 							</div>
@@ -454,6 +454,11 @@
 					$("#email").text(data.email);
 				});
 
+			}
+
+			function changeLanguage() {
+				const lang = $("#lang").val();
+				location.href = ['/en/', '/ar/', '/ku/'][lang];
 			}
 
 			$(document).ready(() => {

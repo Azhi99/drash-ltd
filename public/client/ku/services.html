@@ -71,9 +71,9 @@
 								<div class="languages-switcher">
 									<i class="ri-global-line"></i>
 									<select id="lang" onchange="changeLanguage()">
-										<option value="3">کوردی</option>
-										<option value="1">English</option>	
-										<option value="2">العربية</option>
+										<option value="2">کوردی</option>
+										<option value="0">English</option>	
+										<option value="1">العربية</option>
 									</select>
 								</div>
 							</div>
@@ -252,8 +252,8 @@
 		<section class="services-area services-area-style-two bg-color pt-100 pb-70">
 			<div class="container">
 				<div class="section-title">
-					<span>Shipping services</span>
-					<h2>What we can do for you</h2>
+					<span>خزمەتگوزاریەکانمان</span>
+					<h2>دەتوانین چی بۆ تۆ بکەین</h2>
 				</div>
 
 				<div class="row justify-content-center align-items-center" id="services">
@@ -438,6 +438,11 @@
 					$("#email").text(data.email);
 				});
 
+			}
+
+			function changeLanguage() {
+				const lang = $("#lang").val();
+				location.href = ['/en/', '/ar/', '/ku/'][lang];
 			}
 
 			$(document).ready(() => {

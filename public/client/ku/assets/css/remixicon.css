@@ -10,12 +10,12 @@
 */
 @font-face {
   font-family: "remixicon";
-  src: url('/ku/fonts/remixicon.eot?t=1590207869815'); /* IE9*/
-  src: url('/ku/fonts/remixicon.eot?t=1590207869815#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('/ku/fonts/remixicon.woff2?t=1590207869815') format("woff2"),
-  url("/ku/fonts/remixicon.woff?t=1590207869815") format("woff"),
-  url('/ku/fonts/remixicon.ttf?t=1590207869815') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('/ku/fonts/remixicon.svg?t=1590207869815#remixicon') format('svg'); /* iOS 4.1- */
+  src: url('/ar/fonts/remixicon.eot?t=1590207869815'); /* IE9*/
+  src: url('/ar/fonts/remixicon.eot?t=1590207869815#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/ar/fonts/remixicon.woff2?t=1590207869815') format("woff2"),
+  url("/ar/fonts/remixicon.woff?t=1590207869815") format("woff"),
+  url('/ar/fonts/remixicon.ttf?t=1590207869815') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('/ar/fonts/remixicon.svg?t=1590207869815#remixicon') format('svg'); /* iOS 4.1- */
   font-display: swap;
 }
 

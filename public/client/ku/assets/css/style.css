@@ -1336,7 +1336,7 @@ Banner Area Style
   position: relative;
   height: 555px;
   overflow: hidden;
-  background-image: url('/ku/images/banner/banner-bg-1.jpg');
+  background-image: url('/ar/images/banner/banner-bg-1.jpg');
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1352,7 +1352,7 @@ Banner Area Style
 }
 
 .banner-area.banner-area-style-two {
-  background-image: url('/ku/images/banner/banner-bg-2.jpg');
+  background-image: url('/ar/images/banner/banner-bg-2.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1373,7 +1373,7 @@ Banner Area Style
 
 .banner-area.banner-area-style-three {
   background-color: #ffffff;
-  background-image: url('/ku/images/banner/banner-bg-3.png');
+  background-image: url('/ar/images/banner/banner-bg-3.png');
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1825,7 +1825,7 @@ Logistics Solutions Area Style
 }
 
 .logistics-solutions-img {
-  background-image: url('/ku/images/logistics-solutions-img.jpg');
+  background-image: url('/ar/images/logistics-solutions-img.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1834,7 +1834,7 @@ Logistics Solutions Area Style
 }
 
 .logistics-solutions-img.bg-2 {
-  background-image: url('/ku/images/solutions-img.png');
+  background-image: url('/ar/images/solutions-img.png');
   border-radius: 10px;
 }
 
@@ -1988,7 +1988,7 @@ Request Quote Area Style
 }
 
 .request-quote-area.request-quote-area-style-three {
-  background-image: url('/ku/images/request-quote-bg.jpg');
+  background-image: url('/ar/images/request-quote-bg.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1999,7 +1999,7 @@ Request Quote Area Style
 }
 
 .request-quote-img {
-  background-image: url('/ku/images/request-quote-img.jpg');
+  background-image: url('/ar/images/request-quote-img.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

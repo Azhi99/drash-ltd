@@ -8,7 +8,7 @@ router.get('/:file', (req, res) => {
     if(fs.existsSync(file)){
         return res.sendFile(file);
     } 
-    return res.sendFile(path.join(__dirname, '../public/client/404Notfound.html'));
+    return res.sendFile(path.join(__dirname, '../public/client/ar/404.html'));
 });
 
 router.get('/:folder/:file', (req, res) => {

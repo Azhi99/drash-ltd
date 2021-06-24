@@ -24,7 +24,11 @@
 
 		var width = $(window).width();
 		if(width >= 349 && width < 700 && scrolled > 300) $('.call-now').addClass('active');
-		if(scrolled < 300) $('.call-now').removeClass('active');
+		if(scrolled < 300 ) $('.call-now').removeClass('active');
+
+		if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+			$('.call-now').removeClass('active');
+		}
 	});
 
 	// Team Slider JS

@@ -57,7 +57,7 @@ $body-family: 'Open Sans', sans-serif;
 $heading-font-family: 'Barlow', sans-serif;
 
 $body-color: #1f2428;
-$main-color: #f76649;
+$main-color: #56A5C0;
 $heading-color: #1f2428;
 $white-color: #ffffff;
 $black-color: #000000;
@@ -220,7 +220,7 @@ Default Btn Area Style*/
 		}
 	}
 	&.btn-two {
-		background-color: #fde0db;
+		background-color: #ddf0f7;
 		color: $main-color;
 		border: 1px solid $main-color;
 	}
@@ -1356,13 +1356,12 @@ Banner Area Style
 		font-weight: 600;
 		display: inline-block;
 		color: $main-color;
-		background-color: #fde0db;
-		border: 1px solid $main-color;
+		background-color: #ddf0f7;
 		margin-bottom: 20px;
 		line-height: 1;
 		padding: 10px 20px;
 		animation: 0.3s fadeInUpBig;
-		border-radius: 50px;
+		border-radius: 8px;
 	}
 	h1 {
 		font-size:72px;
@@ -1862,7 +1861,7 @@ Request Quote Area Style
 	margin-bottom: 100px;
 	.top-title {
 		font-size: 16px;
-		color: #f76649;
+		color: #56A5C0;
 		display: block;
 		margin-bottom: 10px;
 	}

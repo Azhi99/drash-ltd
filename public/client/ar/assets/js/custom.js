@@ -5,6 +5,8 @@
 	$('.mean-menu').meanmenu({
 		meanScreenWidth: "991"
 	});
+
+	$('.call-now').removeClass('active');
 	
 	// Header Sticky, Go To Top JS
 	$(window).on('scroll', function() {
@@ -18,9 +20,16 @@
 
 		// Go To Top JS
 		var scrolled = $(window).scrollTop();
+
 		if (scrolled > 300) $('.go-top').addClass('active');
 		if (scrolled < 300) $('.go-top').removeClass('active');
+
+		var width = $(window).width();
+		if (width >= 367 && width < 700 && scrolled > 300) $('.call-now').addClass('active');
+		if (scrolled < 300) $('.call-now').removeClass('active');
 	});
+
+	
 
 	// Team Slider JS
 	$('.team-sidler').owlCarousel({

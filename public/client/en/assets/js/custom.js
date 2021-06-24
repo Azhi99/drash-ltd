@@ -5,6 +5,7 @@
 	$('.mean-menu').meanmenu({
 		meanScreenWidth: "991"
 	});
+
 	
 	// Header Sticky, Go To Top JS
 	$(window).on('scroll', function() {
@@ -20,6 +21,10 @@
 		var scrolled = $(window).scrollTop();
 		if (scrolled > 300) $('.go-top').addClass('active');
 		if (scrolled < 300) $('.go-top').removeClass('active');
+
+		var width = $(window).width();
+		if(width >= 349 && width < 700 && scrolled > 300) $('.call-now').addClass('active');
+		if(scrolled < 300) $('.call-now').removeClass('active');
 	});
 
 	// Team Slider JS

@@ -1,5 +1,5 @@
 $body-color: #1f2428;
-$main-color: #f76649;
+$main-color: #56A5C0;
 $heading-color: #1f2428;
 $white-color: #ffffff;
 $black-color: #000000;
@@ -749,6 +749,9 @@ $box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
             }
         }
     }
+    .social-icon {
+        display: list-item;
+    }
 
 }
 
@@ -760,6 +763,10 @@ $box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
             max-width: 540px;
         }
     }
+    .social-icon {
+        display: list-item;
+    }
+
 
 }
 

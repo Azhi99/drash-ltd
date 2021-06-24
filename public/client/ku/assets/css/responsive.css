@@ -1339,7 +1339,7 @@
     border-bottom: none !important;
   }
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a.active {
-    color: #f76649;
+    color: #56A5C0;
   }
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li li a {
     font-size: 15px;
@@ -1356,10 +1356,10 @@
     width: 35px;
     height: 30px;
     padding-top: 7px;
-    color: #f76649;
+    color: #56A5C0;
   }
   .mobile-responsive-nav .mean-container a.meanmenu-reveal span {
-    background: #f76649;
+    background: #56A5C0;
     height: 4px;
     margin-top: -6px;
     border-radius: 3px;

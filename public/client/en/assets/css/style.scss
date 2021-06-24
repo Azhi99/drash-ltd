@@ -57,7 +57,7 @@ $body-family: 'Open Sans', sans-serif;
 $heading-font-family: 'Barlow', sans-serif;
 
 $body-color: #1f2428;
-$main-color: #f76649;
+$main-color: #56A5C0;
 $heading-color: #1f2428;
 $white-color: #ffffff;
 $black-color: #000000;
@@ -220,7 +220,7 @@ Default Btn Area Style*/
 		}
 	}
 	&.btn-two {
-		background-color: #fde0db;
+		background-color: #ddf0f7;
 		color: $main-color;
 		border: 1px solid $main-color;
 	}
@@ -1261,7 +1261,7 @@ Banner Area Style
 	position: relative;
 	height: 555px;
 	overflow: hidden;
-	background-image: url(../../assets/images/banner/banner-bg-1.jpg);
+	background-image: url(/en/images/banner/banner-bg-1.jpg);
 	background-position: right;
 	background-repeat: no-repeat;
     background-size: contain;
@@ -1273,7 +1273,7 @@ Banner Area Style
 		}
 	}
 	&.banner-area-style-two {
-		background-image: url(../../assets/images/banner/banner-bg-2.jpg);
+		background-image: url(/en/images/banner/banner-bg-2.jpg);
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -1290,7 +1290,7 @@ Banner Area Style
 	}
 	&.banner-area-style-three {
 		background-color: $white-color;
-		background-image: url(../../assets/images/banner/banner-bg-3.png);
+		background-image: url(/en/images/banner/banner-bg-3.png);
 		background-position: right;
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -1356,13 +1356,12 @@ Banner Area Style
 		font-weight: 600;
 		display: inline-block;
 		color: $main-color;
-		background-color: #fde0db;
-		border: 1px solid $main-color;
+		background-color: #ddf0f7;
 		margin-bottom: 20px;
 		line-height: 1;
 		padding: 10px 20px;
 		animation: 0.3s fadeInUpBig;
-		border-radius: 50px;
+		border-radius: 8px;
 	}
 	h1 {
 		font-size:72px;
@@ -1692,14 +1691,14 @@ Logistics Solutions Area Style
 	}
 }
 .logistics-solutions-img {
-	background-image: url(../../assets/images/logistics-solutions-img.jpg);
+	background-image: url(/en/images/logistics-solutions-img.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
 	position: relative;
 	&.bg-2 {
-		background-image: url(../../assets/images/solutions-img.png);
+		background-image: url(/en/images/solutions-img.png);
 		border-radius: 10px;
 	}
 	.video-button {
@@ -1841,7 +1840,7 @@ Request Quote Area Style
 		}
 	}
 	&.request-quote-area-style-three {
-		background-image: url(../../assets/images/request-quote-bg.jpg);
+		background-image: url(/en/images/request-quote-bg.jpg);
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -1851,7 +1850,7 @@ Request Quote Area Style
 	}
 }
 .request-quote-img {
-	background-image: url(../../assets/images/request-quote-img.jpg);
+	background-image: url(/en/images/request-quote-img.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1862,7 +1861,7 @@ Request Quote Area Style
 	margin-bottom: 100px;
 	.top-title {
 		font-size: 16px;
-		color: #f76649;
+		color: #56A5C0;
 		display: block;
 		margin-bottom: 10px;
 	}
@@ -3905,6 +3904,97 @@ Go Top Style*/
 	text-align: center;
 	height: 42px;
 	line-height: 42px;
+	transform: scale(0);
+	visibility: hidden;
+	transition: .9s;
+	i {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		color: $white-color;
+		transition: 0.5s;
+		font-size: 20px;
+		&:last-child {
+			opacity: 0;
+			visibility: hidden;
+			top: 60%;
+		}
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background-color: $main-color;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.5s;
+	}
+	&:hover {
+		color: $white-color;
+		background-color: $main-color;
+		&::before {
+			opacity: 1;
+			visibility: visible;
+		}
+		i {
+			&:first-child {
+				opacity: 0;
+				top: 0;
+				visibility: hidden;
+			}
+			&:last-child {
+				opacity: 1;
+				visibility: visible;
+				top: 50%;
+			}
+		}
+	}
+	&:focus {
+		color: $white-color;
+		&::before {
+			opacity: 1;
+			visibility: visible;
+		}
+		i {
+			&:first-child {
+				opacity: 0;
+				top: 0;
+				visibility: hidden;
+			}
+			&:last-child {
+				opacity: 1;
+				visibility: visible;
+				top: 50%;
+			}
+		}
+	}
+	&.active {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+		right: 3%;
+		top: 87%;
+		transform: scale(1);
+	} 
+}
+.call-now {
+	position: fixed;
+	cursor: pointer;
+	right: 3%;
+	top: 87%;
+	background-color: $main-color;
+	z-index: 4;
+	width: 40px;
+	text-align: center;
+	// height: 42px;
+	// line-height: 42px;
 	transform: scale(0);
 	visibility: hidden;
 	transition: .9s;

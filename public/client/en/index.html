@@ -48,41 +48,6 @@
 		
 		<!-- Start Header Area -->
 		<header class="header-area">
-			<!-- Start Top Header -->
-			<div class="top-header">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-lg-6 col-md-6">
-							<ul class="header-left-content">
-								<li>
-									<a href="https://www.facebook.com/" target="_blank" class="fb-link">
-										<i class="ri-facebook-fill"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://www.instagram.com/" target="_blank" class="insta-link">
-										<i class="ri-instagram-line"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="col-lg-6 col-md-6">
-							<div class="header-right-content">
-								<div class="languages-switcher">
-									<i class="ri-global-line"></i>
-									<select onchange="changeLanguage()" id="lang">
-										<option value="0">English</option>	
-										<option value="1">العربية</option>
-										<option value="2">کوردی</option>
-									</select>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Start Top Header -->
 			
 			<!-- Start Navbar Area -->
 			<div class="navbar-area">
@@ -132,6 +97,38 @@
                                     <li class="nav-item">
 										<a href="/en/contact" class="nav-link">Contact</a>
 									</li>
+
+                                    <li class="nav-item float-right">
+										<a href="javascript:void(0)" class="nav-link active">
+											<img src="/en/images/uk-flag.png" alt="" style="margin-top: -2px;"> &nbsp; ENG /
+										</a>
+										
+									</li>
+									
+                                    <li class="nav-item">
+										<a href="/ar/" class="nav-link">
+											<img src="/en/images/iraq-flag.png" alt="" style="margin-top: -2px;"> &nbsp; AR /
+										</a>
+									</li>
+									
+                                    <li class="nav-item">
+										<a href="/ku/" class="nav-link">
+											<img src="/en/images/ku-flag.png" alt="" width="16px" height="16px" style="margin-top: -2px;"> &nbsp; KU /
+										</a>
+									</li>
+									
+
+
+									<li class="social-icon">
+										<a href="https://www.facebook.com/" target="_blank" class="fb-link" style="font-size: 24px; color: black;">
+											<img src="/en/images/facebook-fill.png" alt="Facebook icon"> <span style="font-size: 18px;"> Facebook </span>
+										</a>
+									</li>
+									<li class="social-icon">
+										<a href="https://www.instagram.com/" target="_blank" class="insta-link" style="font-size: 24px; color: black;">
+											<img src="/en/images/instagram-line.png" alt="Instagram icon"> <span style="font-size: 18px;"> Instagram </span>
+										</a>
+									</li>
                                 </ul>
 
                                 <div class="others-options">
@@ -139,8 +136,8 @@
 										<li>
 											<a href="tel:" class="default-btn phone-link">
 												<span>
-													<span class="top-phone">  </span>
-													<i class="ri-phone-fill"></i>
+													<span class="top-phone" style="margin-left: -20px;">  </span>
+													<i class="ri-phone-fill" style="margin-left: -12px;"></i>
 												</span>
 											</a>
 										</li>
@@ -191,17 +188,20 @@
 					<div class="container">
 						<div class="banner-content">
 							<span class="top-title">Welcome to Drash - LTD</span>
-							<h1>We are Drash transportation and Logistics company</h1>
-								
-							<p> Drash Company is working freight forwarding company, air greight, sea freight, customs clearance management operations and conducting formalities relating to imports and exports it also covers the delivery of products both domestically and intern </p>
+							<div class="card p-3 shadow-sm rounded" style="max-width: 640px; background-color: rgba(248, 249, 250, .8);">
 
-							<div class="banner-btn">
-								<a href="javascript:void(0)" class="default-btn" onclick="document.getElementById('full-name').focus()">
-									<span>
-										Send an email
-										<i class="ri-send-plane-2-fill"></i>
-									</span>
-								</a>
+								<h1 style="font-size: 48px;">We are Drash transportation and Logistics company</h1>
+									
+								<p> Drash Company is working freight forwarding company, air greight, sea freight, customs clearance management operations and conducting formalities relating to imports and exports it also covers the delivery of products both domestically and intern </p>
+	
+								<div class="banner-btn">
+									<a href="javascript:void(0)" class="default-btn" onclick="document.getElementById('full-name').focus()">
+										<span>
+											Send an email
+											<i class="ri-send-plane-2-fill"></i>
+										</span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -317,129 +317,23 @@
 		<!-- End Choose Us Area -->
 
 		<!-- Start Services Area -->
-		<section class="services-area bg-color pt-100 pb-70">
+		<section class="services-area bg-color" style="padding-top: 50px; padding-bottom: 30px;">
 			<div class="container">
 				<div class="section-title">
-					<span>Our services</span>
+					<span style="font-size: 21px;">Our services</span>
 					<h2>What we can do for you</h2>
 				</div>
 
-				<div class="row align-items-center justify-content-center" id="services">
+				<div class="row" id="services">
 					<!-- Services in here -->
+
+				</div>
+				<div class="text-center mt-2">
+					<a href="/en/services" class="default-btn"> See more services &nbsp; <i class="ri-arrow-right-circle-line"></i> </a>
 				</div>
 			</div>
 		</section>
 		<!-- End Services Area -->
-
-		<!-- Start Logistics Solutions Area -->
-		<section class="logistics-solutions-area ptb-100">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-5">
-						<div class="logistics-solutions">
-							<span>Logistics solutions</span>
-							<h2>We provide the best solution for you</h2>
-
-							<ul>
-								<li>
-									<i class="flaticon-warehouse-1"></i>
-									<h3>Warehouse solutions</h3>
-									<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit amet tincidunt nibh pulvinar eget tincidunt.</p>
-								</li>
-
-								<li>
-									<i class="flaticon-warehouse"></i>
-									<h3>Transport and distribution</h3>
-									<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit amet tincidunt nibh pulvinar eget tincidunt.</p>
-								</li>
-
-								<li>
-									<i class="flaticon-contract"></i>
-									<h3>Order management</h3>
-									<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a lorem ipsum dolor sit amet tincidunt nibh pulvinar eget tincidunt.</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-lg-7">
-						<div class="logistics-solutions-img">
-							<div class="video-button">
-								<a href="https://www.youtube.com/watch?v=cTxCqUwnLg4" class="popup-youtube">
-									<i class="ri-play-fill"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Logistics Solutions Area -->
-
-		<!-- Start Counter Area -->
-		<section class="counter-area bg-color pt-100 pb-70">
-			<div class="container">
-				<div class="counter-bg">
-					<div class="row">
-						<div class="col-lg-3 col-sm-6">
-							<div class="single-counter">
-								<i class="flaticon-new-year"></i>
-
-								<div class="count-title">
-									<h2>
-										<span class="odometer" data-count="30">00</span> 
-									</h2>
-									<h4>Number of years</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-sm-6">
-							<div class="single-counter">
-								<i class="flaticon-bus"></i>
-
-								<div class="count-title">
-									<h2>
-										<span class="odometer" data-count="50">00</span> 
-										<span class="target">+</span>
-									</h2>
-									<h4>Specialist vehicles</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-sm-6">
-							<div class="single-counter">
-								<i class="flaticon-package"></i>
-
-								<div class="count-title">
-									<h2>
-										<span class="odometer" data-count="30">00</span> 
-										<span class="target">K</span>
-									</h2>
-									<h4>Deliveries per year</h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-sm-6">
-							<div class="single-counter">
-								<i class="flaticon-rating"></i>
-
-								<div class="count-title">
-									<h2>
-										<span class="odometer" data-count="10">00</span> 
-										<span class="target">K</span>
-									</h2>
-									<h4>Satisfied clients</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Counter Area -->
 
 		<!-- Start Request A Quote Area -->
 		<section class="request-quote-area ptb-100" id="send-en-email">
@@ -451,10 +345,10 @@
 
 					<div class="col-lg-5">
 						<div class="request-quote-content">
-							<span class="top-title">Send an email</span>
+							<span class="top-title" style="font-size: 21px;">Send an email</span>
 							<h2>Tell us your needs, and our industry experts will respond</h2>
 								
-							<div class="request-quote-from">
+							<div class="request-quote-from shadow-lg rounded" style="padding-right: 20px;">
 								<div class="row">
 									<div class="col-lg-12 col-sm-12">
 										<div class="form-group">
@@ -508,105 +402,42 @@
 			</div>
 		</section>
 		<!-- End Request A Quote Area -->
-
-		<!-- Start Testimonials Area -->
-		<!-- <section class="testimonials-area ptb-100">
-			<div class="container">
-				<div class="section-title">
-					<span>Testimonials</span>
-					<h2>What people's say about us</h2>
-				</div>
-
-				<div class="testimonials-slider owl-carousel owl-theme">
-					<div class="single-testimonials">
-						<i class="ri-double-quotes-l"></i>
-
-						<p>“ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum.”</p>
-
-						<img src="/en/images/testimonials/testimonials-1.jpg" alt="Images">
-						<div class="testimonials-title">
-							<h3>Carol Mcdonald</h3>
-							<span>Management</span>
-						</div>
-					</div>
-
-					<div class="single-testimonials">
-						<i class="ri-double-quotes-l"></i>
-
-						<p>“ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum.”</p>
-
-						<img src="/en/images/testimonials/testimonials-2.jpg" alt="Images">
-
-						<div class="testimonials-title">
-							<h3>Alex Mcdonald</h3>
-							<span>Director</span>
-						</div>
-					</div>
-
-					<div class="single-testimonials">
-						<i class="ri-double-quotes-l"></i>
-
-						<p>“ Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum.”</p>
-
-						<img src="/en/images/testimonials/testimonials-2.jpg" alt="Images">
-
-						<div class="testimonials-title">
-							<h3>Alex Mcdonald</h3>
-							<span>Director</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> -->
-		<!-- End Testimonials Area -->
-
+		
 		<!-- Start Footer Area -->
-		<footer class="footer-area bg-color pt-100 pb-70">
-			<div class="container">
+		<footer class="footer-area" style="background-color: #e2e8f1; padding-bottom: 15px; padding-top: 35px;">
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-6 col-md-6">
-						<div class="single-footer-widget single-bg">
-							<a href="/en/" class="logo">
-								<img src="/en/images/logo.png" alt="Image" width="110" height="20">
-							</a>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p> 
-
-							<ul class="social-icon">
-								<li>
-									<a href="https://www.facebook.com/" target="_blank" class="fb-link">
-										<i class="ri-facebook-fill"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://www.instagram.com/" target="_blank" class="insta-link">
-										<i class="ri-instagram-line"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
+					<div class="col-lg-1 col-md-1 col-sm-12">
+						<a href="/en/" class="logo">
+							<img src="/en/images/logo.png" alt="Image" width="70" height="10" style="margin-top: -8px;">
+						</a>
 					</div>
-
-					<div class="col-lg-6 col-md-6">
-						<div class="single-footer-widget">
-							<h3>Get in touch</h3>
-
-							<ul class="address">
-								<li>
-									<span><i class="ri-map-pin-fill"></i> Address:</span>
-									<p id="address"> .  </p>
-								</li>
-								<li class="location">
-									<span><i class="ri-phone-fill"></i> Phone:</span>
-									<a href="tel:" class="phone-link" id="bottom-phone"> . </a>
-								</li>
-								<li>
-									<span><i class="ri-mail-fill"></i> Email:</span>
-									<a href="mailto:" id="email"> . </a>
-								</li>
-							</ul>
-						</div>
+					<div class="col-lg-2 col-md-2 col-sm-12">
+						<h3>Get in touch</h3>
 					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 mt-2">
+						<span><i class="ri-map-pin-fill"></i> Address:</span>
+						<span id="address"> .  </span>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 mt-2">
+						<span><i class="ri-phone-fill"></i> Phone:</span>
+						<a href="tel:" class="phone-link" id="bottom-phone"> . </a>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-12 mt-2">
+						<span><i class="ri-mail-fill"></i> Email:</span>
+						<a href="mailto:" id="email"> . </a>
+					</div>
+					<div class="col-lg-1 col-md-1 col-sm-12" style="width: 8%;">
+						<a href="https://www.facebook.com/" target="_blank" class="fb-link">
+							<i class="ri-facebook-fill" style="font-size: 28px;"></i>
+						</a>
+					</div>
+					<div class="col-lg-1 col-md-1 col-sm-12" style="width: 8%;">
+						<a href="https://www.instagram.com/" target="_blank" class="insta-link">
+							<i class="ri-instagram-line" style="font-size: 28px;"></i>
+						</a>
+					</div>
+					
 				</div>
 			</div>
 		</footer>
@@ -624,6 +455,9 @@
 		<!-- End Copy Right Area -->
 		
 		<!-- Start Go Top Area -->
+		<div class="default-btn call-now"  style="width: 85%; margin-right: 10%; padding-top: 13.6px; padding-bottom: 13.6px;">
+			Call now: &nbsp; <a href="tel:" class="top-phone phone-link text-white">  </a>
+		</div>
 		<div class="go-top">
 			<i class="ri-arrow-up-s-fill"></i>
 			<i class="ri-arrow-up-s-fill"></i>
@@ -666,17 +500,22 @@
 					data.length = 4;
 					data.forEach(service => {
 						$("#services").append(`
-							<div class="col-lg-3 col-sm-6">
+							<div class="col-lg-3 col-sm-6 pt-3 shadow-lg mx-2 mb-2" style="border-radius: 8px; height:40%;">
 								<div class="single-services-box">
 									<a href="javascript:void(0)">
 										<img src="/services/images/${service.image_path.split("/")[2]}" alt="Images" width="550" height="400">
 									</a>
-									<h3>
+									<h5 style="height: 45px; text-align: left;">
 										<a href="javascript:void(0)">
 											${service.title_en}
 										</a>
-									</h3>
-									<p>${service.desc_en.substring(0, 62)}...</p>
+									</h5>
+									<p id="service-with-dots-${service.s_id}" style="text-align: left;"> ${service.desc_en.substring(0, 63)}... </p>
+									<p id="service-all-${service.s_id}" style="display: none; text-align: left;"> ${service.desc_en} </p>
+									
+									<button class="default-btn" id="btn-see-${service.s_id}" onclick="showMore(${service.s_id})" style="padding: 10px 25px;"> <i class="ri-file-list-3-line"></i> Read more  &nbsp; </button>
+									<button class="default-btn" id="btn-hide-${service.s_id}" onclick="seeLess(${service.s_id})" style="padding: 10px 25px; display: none;"> See less  &nbsp; </button>
+
 								</div>
 							</div>
 						`);
@@ -684,8 +523,8 @@
 				});
 
 				axios.get('/contactUs/getContact').then(({data}) => {
-					$(".phone-link").attr('href', 'tel:' + data.phones.split(',')[0]);
-					$(".top-phone,#bottom-phone").text('+964(0) ' + data.phones.split(',')[0].slice(1));
+					$(".phone-link").attr('href', 'tel:' + '+964' + data.phones.split(',')[0].slice(1));
+					$(".top-phone,#bottom-phone").text(data.phones.split(',')[0]);
 					$("#address").text(data.address);
 					$(".fb-link").attr('href', data.fb_link);
 					$(".insta-link").attr('href', data.insta_link);
@@ -693,6 +532,20 @@
 					$("#email").text(data.email);
 				});
 
+			}
+
+			function showMore(s_id) {
+				$('#service-with-dots-' + s_id).hide(400);
+				$('#service-all-' + s_id).show(400);
+				$('#btn-see-' + s_id).hide();
+				$('#btn-hide-' + s_id).show();
+			}
+
+			function seeLess(s_id) {
+				$('#service-with-dots-' + s_id).show(400);
+				$('#service-all-' + s_id).hide(400);
+				$('#btn-see-' + s_id).show();
+				$('#btn-hide-' + s_id).hide();
 			}
 
 			function changeLanguage() {

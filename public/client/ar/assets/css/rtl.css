@@ -466,6 +466,16 @@
   left: 3%;
 }
 
+.call-now {
+  right: auto;
+  left: 6.2%;
+}
+
+.call-now.active {
+  right: auto;
+  left: 6.2%;
+}
+
 @media only screen and (max-width: 767px) {
   .logistics-solutions ul {
     padding-left: 0;

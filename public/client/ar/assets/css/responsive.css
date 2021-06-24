@@ -608,12 +608,24 @@
   .sidebar-widget.recent-post ul li:last-child {
     padding-bottom: 0 !important;
   }
+  .call-now {
+    width: 85%;
+    margin-left: 7%;
+    padding-top: 13.7142px;
+    padding-bottom: 13.7142px;
+  }
+  .social-icon {
+    display: list-item;
+  }
 }
 
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .about-area .container-fluid {
     max-width: 540px;
+  }
+  .social-icon {
+    display: list-item;
   }
 }
 
@@ -1339,7 +1351,7 @@
     border-bottom: none !important;
   }
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a.active {
-    color: #f76649;
+    color: #56A5C0;
   }
   .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li li a {
     font-size: 15px;
@@ -1356,10 +1368,10 @@
     width: 35px;
     height: 30px;
     padding-top: 7px;
-    color: #f76649;
+    color: #56A5C0;
   }
   .mobile-responsive-nav .mean-container a.meanmenu-reveal span {
-    background: #f76649;
+    background: #56A5C0;
     height: 4px;
     margin-top: -6px;
     border-radius: 3px;

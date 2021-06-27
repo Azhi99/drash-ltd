@@ -100,20 +100,20 @@
 
                                     <li class="nav-item float-right">
 										<a href="javascript:void(0)" class="nav-link active">
-											<img src="/en/images/uk-flag.png" alt="" style="margin-top: -2px;"> &nbsp; ENG /
+											<img src="/en/images/uk-flag.png" alt="" style="margin-top: -2px;"> &nbsp; ENG
 										</a>
 										
 									</li>
 									
                                     <li class="nav-item">
 										<a href="/ar/" class="nav-link">
-											<img src="/en/images/iraq-flag.png" alt="" style="margin-top: -2px;"> &nbsp; AR /
+											<img src="/en/images/iraq-flag.png" alt="" style="margin-top: -2px;"> &nbsp; AR
 										</a>
 									</li>
 									
                                     <li class="nav-item">
 										<a href="/ku/" class="nav-link">
-											<img src="/en/images/ku-flag.png" alt="" width="16px" height="16px" style="margin-top: -2px;"> &nbsp; KU /
+											<img src="/en/images/ku-flag.png" alt="" width="16px" height="16px" style="margin-top: -2px;"> &nbsp; KU
 										</a>
 									</li>
 									
@@ -146,35 +146,6 @@
                             </div>
                         </nav>
                     </div>
-				</div>
-				
-				<div class="others-option-for-responsive">
-					<div class="container">
-						<div class="dot-menu">
-							<div class="inner">
-								<div class="circle circle-one"></div>
-								<div class="circle circle-two"></div>
-								<div class="circle circle-three"></div>
-							</div>
-						</div>
-						
-						<div class="container">
-							<div class="option-inner">
-								<div class="others-option justify-content-center d-flex align-items-center">
-									<ul>
-										<li>
-											<a href="tel:" class="default-btn">
-												<span>
-													<span class="top-phone" style="margin-left: -22px;">  </span>
-													<i class="ri-phone-fill"></i>
-												</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
             </div>
 			<!-- End Navbar Area -->
@@ -456,7 +427,7 @@
 		
 		<!-- Start Go Top Area -->
 		<div class="default-btn call-now"  style="width: 85%; margin-right: 10%; padding-top: 13.6px; padding-bottom: 13.6px;">
-			Call now: &nbsp; <a href="tel:" class="top-phone phone-link text-white">  </a>
+			<i class="ri-phone-fill"></i> &nbsp; <a href="tel:" class="top-phone phone-link text-white">  </a>
 		</div>
 		<div class="go-top">
 			<i class="ri-arrow-up-s-fill"></i>
@@ -500,8 +471,8 @@
 					data.length = 4;
 					data.forEach(service => {
 						$("#services").append(`
-							<div class="col-lg-3 col-sm-6 pt-3 shadow-lg mx-2 mb-2" style="border-radius: 8px; height:40%;">
-								<div class="single-services-box">
+							<div class="col-lg-3 col-sm-6 pt-3 mb-2" style="border-radius: 8px; height:40%;">
+								<div class="single-services-box shadow-lg" style="border: 1.5px solid rgb(221, 221, 221); border-radius: 8px; background-color: rgba(240, 240, 240, 0.4); text-align: left;">
 									<a href="javascript:void(0)">
 										<img src="/services/images/${service.image_path.split("/")[2]}" alt="Images" style="width: 550px !important; height: 178px !important;">
 									</a>
@@ -510,7 +481,7 @@
 											${service.title_en}
 										</a>
 									</h5>
-									<p id="service-with-dots-${service.s_id}" style="text-align: left;"> ${service.desc_en.substring(0, 63)}... </p>
+									<p id="service-with-dots-${service.s_id}" style="text-align: left; height: 45px;"> ${service.desc_en.substring(0, 63)}... </p>
 									<p id="service-all-${service.s_id}" style="display: none; text-align: left;"> ${service.desc_en} </p>
 									
 									<button class="default-btn" id="btn-see-${service.s_id}" onclick="showMore(${service.s_id})" style="padding: 10px 25px;"> <i class="ri-file-list-3-line"></i> Read more  &nbsp; </button>

@@ -94,20 +94,20 @@
 									</li>
 									<li class="nav-item float-right">
 										<a href="javascript:void(0)" class="nav-link active">
-											<img src="/en/images/uk-flag.png" alt="" style="margin-top: -2px;"> &nbsp; ENG /
+											<img src="/en/images/uk-flag.png" alt="" style="margin-top: -2px;"> &nbsp; ENG
 										</a>
 										
 									</li>
 									
                                     <li class="nav-item">
 										<a href="/ar/certificates" class="nav-link">
-											<img src="/en/images/iraq-flag.png" alt="" style="margin-top: -2px;"> &nbsp; AR /
+											<img src="/en/images/iraq-flag.png" alt="" style="margin-top: -2px;"> &nbsp; AR
 										</a>
 									</li>
 									
                                     <li class="nav-item">
 										<a href="/ku/certificates" class="nav-link">
-											<img src="/en/images/ku-flag.png" alt="" width="16px" height="16px" style="margin-top: -2px;"> &nbsp; KU /
+											<img src="/en/images/ku-flag.png" alt="" width="16px" height="16px" style="margin-top: -2px;"> &nbsp; KU
 										</a>
 									</li>
 									<li class="social-icon">
@@ -139,34 +139,6 @@
                     </div>
 				</div>
 				
-				<div class="others-option-for-responsive">
-					<div class="container">
-						<div class="dot-menu">
-							<div class="inner">
-								<div class="circle circle-one"></div>
-								<div class="circle circle-two"></div>
-								<div class="circle circle-three"></div>
-							</div>
-						</div>
-						
-						<div class="container">
-							<div class="option-inner">
-								<div class="others-option justify-content-center d-flex align-items-center">
-									<ul>
-										<li>
-											<a href="tel:" class="default-btn" class="phone-link">
-												<span>
-													<span class="top-phone" style="margin-left: -22px;">  </span>
-													<i class="ri-phone-fill"></i>
-												</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
             </div>
 			<!-- End Navbar Area -->
 		</header>
@@ -175,8 +147,10 @@
 		<!-- Start Page Title Area -->
 		<div class="page-title-area">
 			<div class="container">
-				<div class="page-title-content" style="height: 75px;">
-					
+				<div class="page-title-content page-title-content-certificate" style="height: 130px;">
+					<div class="card px-3 py-1" id="abcd" style="max-width: 255px; background-color: rgba(248, 249, 250, .8); margin-left: 125px; margin-top: -90px;">
+						<h1>Certificates</h1>
+					</div>
 				</div>
 			</div>
 
@@ -190,10 +164,9 @@
 		<!-- End Page Title Area -->
 
 		<!-- Start Choose Area -->
-		<h1 class="text-center pt-4"> Certificates </h1>
 		<section class="choose-area pt-70 pb-70">
 			<div class="container">
-				<div class="row d-flex justify-content-around" id="certificates">
+				<div class="row d-flex" id="certificates">
 					
 				</div>
 			</div>
@@ -252,7 +225,7 @@
 		
 		<!-- Start Go Top Area -->
 		<div class="default-btn call-now"  style="width: 85%; margin-right: 10%; padding-top: 13.6px; padding-bottom: 13.6px;">
-			Call now: &nbsp; <a href="tel:" class="top-phone phone-link text-white">  </a>
+			<i class="ri-phone-fill"></i> &nbsp; <a href="tel:" class="top-phone phone-link text-white">  </a>
 		</div>
 		<div class="go-top">
 			<i class="ri-arrow-up-s-fill"></i>
@@ -293,7 +266,7 @@
 				axios.get('/certificates/getData').then(({data}) => {
 					data.forEach(image => {
 						$("#certificates").append(`
-							<div class="col-lg-6 col-md-6 col-sm-12 mb-3 text-center">
+							<div class="col-lg-6 col-md-6 col-sm-12 text-center" style="margin-bottom: 55px;">
 								<img src="/certificates/images/${image.image_path.split('/')[2]}" style="width: 509px; height: 360px;">
 							</div>
 						`);

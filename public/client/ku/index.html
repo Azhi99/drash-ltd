@@ -100,20 +100,20 @@
 									</li>
 									<li class="nav-item float-right">
 										<a href="/en/" class="nav-link">
-											<img src="/en/images/uk-flag.png" alt="" style="margin-top: -2px;"> &nbsp; ENG /
+											<img src="/en/images/uk-flag.png" alt="" style="margin-top: -2px;"> &nbsp; ENG
 										</a>
 										
 									</li>
 									
                                     <li class="nav-item">
 										<a href="/ar/" class="nav-link">
-											<img src="/en/images/iraq-flag.png" alt="" style="margin-top: -2px;"> &nbsp; AR /
+											<img src="/en/images/iraq-flag.png" alt="" style="margin-top: -2px;"> &nbsp; AR
 										</a>
 									</li>
 									
                                     <li class="nav-item">
 										<a href="javascript:void(0)" class="nav-link active">
-											<img src="/en/images/ku-flag.png" alt="" width="16px" height="16px" style="margin-top: -2px;"> &nbsp; KU /
+											<img src="/en/images/ku-flag.png" alt="" width="16px" height="16px" style="margin-top: -2px;"> &nbsp; KU
 										</a>
 									</li>
 									<li class="social-icon">
@@ -146,35 +146,6 @@
                     </div>
 				</div>
 				
-				<div class="others-option-for-responsive">
-					<div class="container">
-						<div class="dot-menu">
-							<div class="inner">
-								<div class="circle circle-one"></div>
-								<div class="circle circle-two"></div>
-								<div class="circle circle-three"></div>
-							</div>
-						</div>
-						
-						<div class="container">
-							<div class="option-inner">
-								<div class="others-option justify-content-center d-flex align-items-center" dir="ltr">
-									<ul>
-										<li>
-											<a href="tel:" class="default-btn phone-link">
-												<span>
-													<span class="top-phone" style="margin-left: -22px;">  </span>
-													<img src="/ku/images/phone-fill.png" style="filter: brightness(0) invert(1); -webkit-transform: scaleX(-1); transform: scaleX(-1);" alt="Icon" width="20" height="20">
-													<!-- <i class="ri-phone-fill"></i> -->
-												</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
             </div>
 			<!-- End Navbar Area -->
 		</header>
@@ -452,8 +423,8 @@
 		<!-- End Copy Right Area -->
 		
 		<!-- Start Go Top Area -->
-		<div class="default-btn call-now">
-			هەر ئێستا پەیوەندی بکە: &nbsp; <a href="tel:" class="top-phone phone-link text-white">  </a>
+		<div class="default-btn call-now" style="width: 85%;">
+			<i class="ri-phone-fill"></i> &nbsp; <a href="tel:" class="top-phone phone-link text-white">  </a>
 		</div>
 		<div class="go-top">
 			<i class="ri-arrow-up-s-fill"></i>
@@ -496,8 +467,8 @@
 					data.length = 4;
 					data.forEach(service => {
 						$("#services").append(`
-							<div class="col-lg-3 col-sm-6 pt-3 shadow-lg mx-2 mb-2" style="border-radius: 8px; height:40%;">
-								<div class="single-services-box">
+							<div class="col-lg-3 col-sm-6 pt-3 mb-2" style="border-radius: 8px; height:40%;">
+								<div class="single-services-box shadow-lg" style="border: 1.5px solid rgb(221, 221, 221); border-radius: 8px; background-color: rgba(240, 240, 240, 0.4); text-align: right;">
 									<a href="javascript:void(0)">
 										<img src="/services/images/${service.image_path.split("/")[2]}" alt="Images" style="width: 550px !important; height: 178px !important;">
 									</a>
@@ -506,7 +477,7 @@
 											${service.title_ku}
 										</a>
 									</h5>
-									<p id="service-with-dots-${service.s_id}" style="text-align: right;"> ${service.desc_ku.substring(0, 63)}... </p>
+									<p id="service-with-dots-${service.s_id}" style="text-align: right; height: 45px;"> ${service.desc_ku.substring(0, 63)}... </p>
 									<p id="service-all-${service.s_id}" style="display: none; text-align: right;"> ${service.desc_ku} </p>
 									
 									<button class="default-btn" id="btn-see-${service.s_id}" onclick="showMore(${service.s_id})" style="padding: 10px 25px;"> <i class="ri-file-list-3-line"></i> زیاتر بخوێنەرەوە &nbsp; </button>

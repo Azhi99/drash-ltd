@@ -468,12 +468,12 @@
 
 .call-now {
   right: auto;
-  left: 6.2%;
+  left: 6.8%;
 }
 
 .call-now.active {
   right: auto;
-  left: 6.2%;
+  left: 6.8%;
 }
 
 @media only screen and (max-width: 767px) {

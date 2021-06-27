@@ -37,10 +37,10 @@
   }
   .banner-content h1 {
     font-size: 35px;
-    color: #ffffff;
+    /* color: #ffffff; */
   }
   .banner-content p {
-    color: #ffffff;
+    /* color: #ffffff; */
     margin-bottom: 25px;
   }
   .banner-area {
@@ -52,7 +52,7 @@
     background-size: cover;
   }
   .banner-area::before {
-    content: "";
+    /* content: ""; */
     position: absolute;
     top: 0;
     left: 0;
@@ -373,7 +373,7 @@
     position: unset;
   }
   .banner-area.banner-area-style-four .banner-content h1 {
-    color: #ffffff;
+    /* color: #ffffff; */
   }
   /* Inner Page */
   .page-title-area {
@@ -741,10 +741,10 @@
   }
   .banner-content h1 {
     font-size: 35px;
-    color: #ffffff;
+    /* color: #ffffff; */
   }
   .banner-content p {
-    color: #ffffff;
+    /* color: #ffffff; */
     margin-bottom: 25px;
   }
   .banner-area {
@@ -756,7 +756,7 @@
     background-size: cover;
   }
   .banner-area::before {
-    content: "";
+    /* content: ""; */
     position: absolute;
     top: 0;
     left: 0;
@@ -1071,7 +1071,7 @@
     position: unset;
   }
   .banner-area.banner-area-style-four .banner-content h1 {
-    color: #ffffff;
+    /* color: #ffffff; */
   }
   /* Inner Page */
   .page-title-area {
@@ -1249,10 +1249,10 @@
     text-align: center;
   }
   .banner-content h1 {
-    color: #ffffff;
+    /* color: #ffffff; */
   }
   .banner-content p {
-    color: #ffffff;
+    /* color: #ffffff; */
   }
   .banner-area {
     height: 100%;
@@ -1263,7 +1263,7 @@
     background-size: cover;
   }
   .banner-area::before {
-    content: "";
+    /* content: ""; */
     position: absolute;
     top: 0;
     left: 0;
@@ -1336,7 +1336,7 @@
   }
   /* Home Four */
   .banner-area.banner-area-style-four .banner-content h1 {
-    color: #ffffff;
+    /* color: #ffffff; */
   }
   /* Inner Page */
   .services-details-area .sidebar-widget {

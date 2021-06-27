@@ -53,10 +53,10 @@ $box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
         }
         h1 {
             font-size: 35px;
-            color: $white-color;
+            // color: $white-color;
         }
         p {
-            color: $white-color;
+            // color: $white-color;
             margin-bottom: 25px;
         }
     }
@@ -68,7 +68,7 @@ $box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
         background-position: center center;
         background-size: cover;
         &::before {
-            content: "";
+            // content: "";
             position: absolute;
             top: 0;
             left: 0;

@@ -599,6 +599,12 @@
     font-size: 16px;
   }
 }
+@media only screen and (min-width: 320px) and (max-width: 348px) {
+  .call-now {
+    width: 81% !important;
+    margin-left: 10.2%;
+  }
+}
 
 /* Min width 349px to Max width 767px */
 @media only screen and (min-width: 349px) and (max-width: 767px) {
@@ -609,8 +615,8 @@
     padding-bottom: 0 !important;
   }
   .call-now {
-    width: 87%;
-    margin-left: 7%;
+    width: 83.9% !important;
+    margin-left: 8.5%;
   }
   .social-icon {
     display: list-item;

@@ -92,20 +92,18 @@
             var desc_en = $("#descEN").val();
             var desc_ar = $("#descAR").val();
             var desc_ku = $("#descKU").val();
-            if(desc_en && desc_ar && desc_ku) {
-                document.getElementById('btnSave').setAttribute('disabled', 'disabled');
-                axios.patch("/aboutUs/updateAbout/1", {
-                    desc_en,
-                    desc_ar,
-                    desc_ku
-                }).then(() => {
-                    alert("Successfully Saved");
-                }).finally(() => {
-                    document.getElementById('btnSave').remove('disabled');
-                });
-            } else {
-                alert('Fill all informations');
-            }
+            
+            document.getElementById('btnSave').setAttribute('disabled', 'disabled');
+            axios.patch("/aboutUs/updateAbout/1", {
+                desc_en,
+                desc_ar,
+                desc_ku
+            }).then(() => {
+                alert("Successfully Saved");
+            }).finally(() => {
+                document.getElementById('btnSave').remove('disabled');
+            });
+            
         }
 
         $(document).ready(() => {

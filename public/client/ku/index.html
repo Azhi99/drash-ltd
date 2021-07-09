@@ -157,7 +157,7 @@
 				<div class="d-table-cell">
 					<div class="container">
 						<div class="banner-content">
-							<span class="top-title">بەخێربێن بۆ دراش</span>
+							<!-- <span class="top-title">بەخێربێن بۆ دراش</span>
 							<div class="card p-3 shadow-sm rounded" style="max-width: 640px; background-color: rgba(248, 249, 250, .8);">
 								<h1 style="font-size: 48px;">کۆمپانیای دراش بۆ کاری گواستـنـەوە</h1>
 									
@@ -173,6 +173,13 @@
 										</span>
 									</a>
 								</div>
+							</div> -->
+							<div class="card p-3 shadow-sm rounded text-center" style="max-width: 475px; background-color: rgba(248, 249, 250, .9);">
+
+								<img src="/en/images/logo2.png" alt="Drash" width="90%">
+								<br>
+								<h1 class="mb-1" style="font-size: 32px;"> گواستـنـەوە و دەستەبەرکردنی کاڵاکانتان </h1>
+								<h3> ئاسمانی - دەریای - وشکایی </h3>
 							</div>
 						</div>
 					</div>
@@ -185,10 +192,10 @@
 		<!-- End Banner Area -->
 
 		<!-- Start Choose Us Area -->
-		<section class="choose-us-area pt-100 pb-70">
+		<section class="choose-us-area pt-70 pb-40">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-6">
+				<div class="row">
+					<!-- <div class="col-lg-6">
 						<div class="choose-us-img">
 							<img src="/ku/images/choose-us/choose-us-img.png" alt="Images">
 
@@ -200,7 +207,6 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="col-lg-6">
 						<div class="choose-us-tab">
 							<h2>بۆچی دەبێت خزمەتگوزایەکانی کۆمپانیای دراش هەڵبژێریت؟</h2>
@@ -278,6 +284,57 @@
 								</div>
 							</div>
 						</div>
+					</div> -->
+					<h2 class="text-center mb-4">بۆچی دەبێت خزمەتگوزایەکانی کۆمپانیای دراش هەڵبژێریت؟</h2>
+					<div class="col-lg-6 col-md-6 col-sm-12 card shadow-sm p-3 mission-vision" style="width: 49%; border: 1px solid rgba(133, 131, 131, .2); border-radius: 8px; background-color: rgba(240, 239, 239, .25);">
+						<h4> بینایی ئێمە </h4>
+						<p style="text-align: justify;">
+							Our aim is to act as an indispensable partner to our clients by helping them 
+							build and maximize sustainable competitive advantages. 
+							We do this by helping them get their products to market quickly, efficiently, and safely.
+							In addition to our expertly crafted and reliably delivered logistics solutions, 
+							our clients can rest assured that every interaction will be driven by integrity and respect, 
+							the fundamental principles of our business.
+						</p>
+						<h4> STRONG RELATIONSHIPS </h4>
+						<p style="text-align: justify;">
+							Relationships are at the heart of all success, and we understand how important 
+							it is to develop strong ones across all areas of our business, from our employees 
+							to our customers, our partners, and our suppliers.
+						</p>
+						<h4> AGILITY AND RESPONSIVENESS </h4>
+						<p style="text-align: justify;">
+							Our company is young, and we’re proud of it. We are agile, 
+							open-minded, and enthusiastic about innovation, and we count those qualities 
+							among the key strengths that make us so effective at providing our clients with 
+							the logistical solutions they need. By minimizing reporting layers and bureaucracy, 
+							we can provide the fastest, most effective communication possible.
+						</p>
+					</div>
+					&nbsp;&nbsp;
+					<div class="col-lg-6 col-md-6 col-sm-12 card shadow-sm p-3 mission-vision" style="width: 49.9%; border: 1px solid rgba(133, 131, 131, .2); border-radius: 8px; background-color: rgba(240, 239, 239, .25);">
+						<h4> ئەرکی سەرەکیمان </h4>
+						<p style="text-align: justify;">
+							Our mission is to deliver a positive, reliable experience to each and every one of our 
+							clients while offering exceptional value in the marketplace and setting the standard 
+							for professionalism in the logistic solutions we provide. In addition to operating our 
+							business profitably, we strive to operate it responsibly both for our clients and our 
+							employees, for whom our goal is to provide a safe and secure work environment.
+						</p>
+						<h4> POSITIVE IMPACT ON CUSTOMER SUCCESS </h4>
+						<p style="text-align: justify;">
+							We understand the impact that our logistics solutions have on 
+							our customers’ businesses, and we take pride in knowing that we’re a positive 
+							driver of their success.
+						</p>
+						<h4> Trust </h4>
+						<p style="text-align: justify;">
+							Trust is everything, and we know how precious and how potentially fragile it is. 
+							As a result, every action we take is geared towards building and strengthening the 
+							trust our clients put in us. That means offering client-centric service, and never 
+							failing to deliver on our promises. We believe the best way to maintain our 
+							clients’ trust is to exceed their expectations in every single interaction.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -464,7 +521,7 @@
 		<script type="text/javascript">
 			function getData() {
 				axios.get('/services/getServices/ku').then(({data}) => {
-					data.length = 4;
+					data.length = 8;
 					data.forEach(service => {
 						$("#services").append(`
 							<div class="col-lg-3 col-sm-6 pt-3 mb-2" style="border-radius: 8px; height:40%;">

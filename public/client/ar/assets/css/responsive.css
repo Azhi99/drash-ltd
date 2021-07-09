@@ -600,6 +600,11 @@
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 348px) {
+  .mission-vision {
+    width: 97% !important;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
   .call-now {
     width: 81% !important;
     margin-left: 10.2%;
@@ -613,6 +618,11 @@
   }
   .sidebar-widget.recent-post ul li:last-child {
     padding-bottom: 0 !important;
+  }
+  .mission-vision {
+    width: 97% !important;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
   }
   .call-now {
     width: 83.9% !important;

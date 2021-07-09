@@ -165,7 +165,7 @@
 		<!-- Start Choose Area -->
 		<section class="choose-area pt-100 pb-70">
 			<div class="container">
-				<div class="row align-items-center">
+				<div class="row">
 					<div class="col-12 mb-5 pb-4" style="border-bottom: 1px solid;">
 						<h1> About Us </h1>
 						<p style="text-align: justify; font-size: 20px;" id="aboutus-description">  </p>
@@ -176,32 +176,15 @@
 							<img src="/en/images/choose-img.jpg" alt="Images">
 
 							<div class="your-of">
-								<h1>30</h1>
+								<h1 id="experience">  </h1>
 								<h3>Year’s of experience in transport services</h3>
 							</div>
 						</div>
 					</div>
 
 					<div class="col-lg-6">
-						<div class="faq-accordion">
-							<h2>Why should you choose Drash company services?</h2>
-
+						<!-- <div class="faq-accordion">
 							<ul class="accordion">
-								<li class="accordion-item">
-									<a class="accordion-title active" href="javascript:void(0)">
-										<span class="flaticon-contract"></span>
-										Our history
-										<i class="ri-add-fill"></i>
-									</a>
-	
-									<div class="accordion-content show">
-										<p>
-											A paragraph about the company history
-										</p>
-
-									</div>
-								</li>
-
 								<li class="accordion-item">
 									<a class="accordion-title" href="javascript:void(0)">
 										<span class="flaticon-target"></span>
@@ -231,6 +214,30 @@
 									</div>
 								</li>
 							</ul>
+						</div> -->
+						<div style="border: 1px solid; border-radius: 8px;" class="p-2">
+							<span class="flaticon-target" style="font-size: 24px; color: #56A5C0;"></span> &nbsp;
+							<h4 style="display: inline-block;"> Our Vision </h4>
+							<p style="text-align: justify;">
+								Our aim is to act as an indispensable partner to our clients by helping them 
+								build and maximize sustainable competitive advantages. 
+								We do this by helping them get their products to market quickly, efficiently, and safely.
+								In addition to our expertly crafted and reliably delivered logistics solutions, 
+								our clients can rest assured that every interaction will be driven by integrity and respect, 
+								the fundamental principles of our business.
+							</p>
+						</div>
+						<br>
+						<div style="border: 1px solid; border-radius: 8px;" class="p-2">
+							<span class="flaticon-mission" style="font-size: 24px; color: #56A5C0;"></span> &nbsp;
+							<h4 style="display: inline-block;"> Our Mission </h4>
+							<p style="text-align: justify;">
+								Our mission is to deliver a positive, reliable experience to each and every one of our 
+								clients while offering exceptional value in the marketplace and setting the standard 
+								for professionalism in the logistic solutions we provide. In addition to operating our 
+								business profitably, we strive to operate it responsibly both for our clients and our 
+								employees, for whom our goal is to provide a safe and secure work environment.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -351,6 +358,7 @@
 
 			$(document).ready(() => {
 				$("#year").text(new Date().getFullYear());
+				$("#experience").text(new Date().getFullYear() - 2017);
 				getData();
 			});
 

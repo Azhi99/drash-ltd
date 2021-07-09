@@ -609,10 +609,18 @@
     width: 81% !important;
     margin-left: 10.2%;
   }
+  #satisfication {
+    font-size: 42px !important;
+    padding: 5px;
+  }
 }
 
 /* Min width 349px to Max width 767px */
 @media only screen and (min-width: 349px) and (max-width: 767px) {
+  #satisfication {
+    font-size: 48px !important;
+    padding: 5px;
+  }
   .sidebar-widget.recent-post ul li {
     height: 100px;
   }
@@ -684,6 +692,14 @@
 
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .banner-content {
+    text-align: center;
+    margin-right: 15% !important;
+  }
+  #satisfication {
+    font-size: 62px !important;
+    padding: 5px;
+  }
   .page-title-content {
     height: 135px !important;
   }

@@ -33,7 +33,7 @@
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="/ar/images/favicon.ico">
 		<!-- Title -->
-		<title> Drash - LTD company </title>
+		<title> شركة دراش </title>
     </head>
 
     <body>
@@ -129,10 +129,13 @@
 									<ul>
 										<li>
 											<a href="tel:" class="default-btn phone-link">
-												<span>
-													<span class="top-phone" style="margin-right: -20px;">  </span>
-													<img src="/ku/images/phone-fill.png" style="filter: brightness(0) invert(1); -webkit-transform: scaleX(-1); transform: scaleX(-1); margin-right: -40px;" alt="Icon" width="20" height="20">
-													<!-- <i class="ri-phone-fill"></i> -->
+												<span style="padding: 0;">
+													<img src="/ku/images/phone-fill.png" style="filter: brightness(0) invert(1) drop-shadow(0 0 0 white); -webkit-transform: scaleX(-1); transform: scaleX(-1);" alt="Icon" width="20" height="20">
+												</span>
+											</a>
+											<a href="mailto:" class="default-btn" id="email-top">
+												<span style="padding: 0;">
+													<img src="/ku/images/mail-line.png" style="filter: brightness(0) invert(1) drop-shadow(0 0 0 white); -webkit-transform: scaleX(-1); transform: scaleX(-1);" alt="Icon" width="20" height="20">
 												</span>
 											</a>
 										</li>
@@ -293,7 +296,7 @@
 					$("#address").text(data.address);
 					$(".fb-link").attr('href', data.fb_link);
 					$(".insta-link").attr('href', data.insta_link);
-					$("#email").attr('href', 'mailto:' + data.email);
+					$("#email,#email-top").attr('href', 'mailto:' + data.email);
 					$("#email").text(data.email);
 				});
 

@@ -31,7 +31,16 @@
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="/en/images/favicon.ico">
 		<!-- Title -->
-		<title>Drash - LTD Company</title>
+		<title>Drash LTD | Contact</title>
+		<!-- <meta name="title" content="Drash LTD">
+		<meta name="description" content="Drash Company Is working freight forwarding company, air freight, sea freight, customs clearance management operations and conducting formalities relating to imports and exports It also covers the delivery of products both domestically and intern">
+		<meta name="keywords" content="drash ltd, transportation company in erbil, drash"> -->
+		<!-- Open Graph / Facebook -->
+		<!-- <meta property="og:type" content="website"> -->
+		<!-- <meta property="og:url" content="https://metatags.io/"> -->
+		<!-- <meta property="og:title" content="Drash LTD">
+		<meta property="og:description" content="Drash Company Is working freight forwarding company, air freight, sea freight, customs clearance management operations and conducting formalities relating to imports and exports It also covers the delivery of products both domestically and intern">
+		<meta property="og:image" content="/en/images/logo.png"> -->
     </head>
 
     <body>
@@ -128,9 +137,13 @@
 									<ul>
 										<li>
 											<a href="tel:" class="default-btn phone-link">
-												<span>
-													<span class="top-phone"  style="margin-left: -20px;">  </span>
-													<i class="ri-phone-fill"  style="margin-left: -12px;"></i>
+												<span style="padding-left: 20px;">
+													<i class="ri-phone-fill"></i>
+												</span>
+											</a>
+											<a href="mailto:" class="default-btn" id="email-top-1">
+												<span style="padding-left: 20px;">
+													<i class="ri-mail-line"></i>
 												</span>
 											</a>
 										</li>
@@ -202,78 +215,80 @@
 						</div>
 					</div>
 					<div class="col-lg-8 col-md-8 col-sm-12">
-						<iframe width="100%" height="94.5%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51502.423422968604!2d-115.24877995231783!3d36.21758989848515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8eaf574293f1b%3A0x8e720e5b03149745!2sLas%20Vegas%2C%20NV%2089108%2C%20USA!5e0!3m2!1sen!2sbd!4v1612342385496!5m2!1sen!2sbd"></iframe>
+						<iframe width="100%" height="94.5%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218.988274762987!2d43.98587828461888!3d36.21547993662778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDEyJzU1LjgiTiA0M8KwNTknMTcuMCJF!5e0!3m2!1sen!2siq!4v1626107475728!5m2!1sen!2siq"></iframe>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- End Contact Info Area -->
 
-		<!-- Start Contact Area -->
-		<section class="main-contact-area pb-100">
+		<!-- Start Request A Quote Area -->
+		<section class="request-quote-area pt-30 pb-40" id="send-en-email">
 			<div class="container">
-				<div class="section-title">
-					<h2>Write us a message</h2>
-				</div>
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="request-quote-img"></div>
+					</div>
 
-				<div id="contactForm" style="border-radius: 10px;">
-					<div class="row">
-						<div class="col-lg-12 col-sm-12">
-							<div class="form-group">
-								<label>Your name</label>
-								<input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name">
-								<div class="help-block with-errors"></div>
+					<div class="col-lg-5">
+						<div class="request-quote-content">
+							<span class="top-title" style="font-size: 21px;">Send an email</span>
+							<h2>Tell us your needs, and our industry experts will respond</h2>
+								
+							<div class="request-quote-from shadow-lg rounded" style="padding-right: 20px;">
+								<div class="row">
+									<div class="col-lg-12 col-sm-12">
+										<div class="form-group">
+											<label class="form-label">Your name</label>
+    										<input type="text" class="form-control" id="full-name">
+										</div>
+									</div>
+
+									<div class="col-lg-12 col-sm-12">
+										<div class="form-group">
+											<label class="form-label">Email address</label>
+    										<input type="email" class="form-control" id="email-address">
+										</div>
+									</div>
+
+									<div class="col-lg-12 col-sm-12">
+										<div class="form-group">
+											<label class="form-label">Phone</label>
+    										<input type="text" class="form-control" id="phone">
+										</div>
+									</div>
+									<div class="col-lg-12 col-sm-12">
+										<div class="form-group">
+											<label class="form-label">Description</label>
+    										<textarea cols="30" rows="6" class="form-control" id="description"></textarea>
+										</div>
+									</div>
+
+								</div>
+
+								<button class="default-btn" id="btn-send">
+									<span>
+										Send an email
+										<i class="ri-send-plane-2-fill"></i>
+
+									</span>
+								</button>
+
+								<div class="alert alert-success mt-2 text-center" id="email-success" style="display: none;">
+									<i class="fa fa-check"></i> &nbsp; Email successfully sent
+								</div>
+
+								<div class="alert alert-danger mt-2 text-center" id="email-failed" style="display: none;">
+									You're recently sent an email
+								</div>
+
 							</div>
 						</div>
-
-						<div class="col-lg-12 col-sm-12">
-							<div class="form-group">
-								<label>Your email</label>
-								<input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email">
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-
-						<div class="col-lg-12 col-sm-12">
-							<div class="form-group">
-								<label>Your phone</label>
-								<input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control">
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-
-						<div class="col-12">
-							<div class="form-group">
-								<label>Your message</label>
-								<textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message"></textarea>
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-
-						<div class="col-lg-12 col-md-12">
-							<button type="submit" class="default-btn w-100" id="btn-send">
-								<span>
-									Send message
-									<i class="ri-send-plane-2-fill"></i>
-								</span>
-							</button>
-							<div id="msgSubmit" class="h3 text-center hidden"></div>
-							<div class="clearfix"></div>
-						</div>
-
-						<div class="alert alert-success mt-2 text-center" id="email-success" style="display: none;">
-							<i class="fa fa-check"></i> &nbsp; Email successfully sent
-						</div>
-
-						<div class="alert alert-danger mt-2 text-center" id="email-failed" style="display: none;">
-							You're recently sent an email
-						</div>
-
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- End Contact Area -->
+		<!-- End Request A Quote Area -->
 
 		<!-- Start Footer Area -->
 		<footer class="footer-area" style="background-color: #e2e8f1; padding-bottom: 15px; padding-top: 35px;">
@@ -373,7 +388,7 @@
 					$("#top-address").text(data.address);
 					$(".fb-link").attr('href', data.fb_link);
 					$(".insta-link").attr('href', data.insta_link);
-					$("#email-bottom,#email-top").attr('href', 'mailto:' + data.email);
+					$("#email-bottom,#email-top,#email-top-1").attr('href', 'mailto:' + data.email);
 					$("#email-bottom,#email-top").text(data.email);
 
 					const phones = data.phones.split(',');
@@ -394,10 +409,10 @@
 				getData();
 
 				$("#btn-send").click(() => {
-					const full_name = $("#name").val();
-					const email = $("#email").val();
-					const phone = $("#phone_number").val();
-					const description = $("#message").val();
+					const full_name = $("#full-name").val();
+					const email = $("#email-address").val();
+					const phone = $("#phone").val();
+					const description = $("#description").val();
 					if(full_name && email && phone) {
 						axios.post('/emails/addEmail', {
 							full_name,
@@ -405,10 +420,10 @@
 							email,
 							description
 						}).then(() => {
-							$("#name").val(null);
-							$("#email").val(null);
-							$("#phone_number").val(null);
-							$("#message").val(null);
+							$("#full-name").val(null);
+							$("#email-address").val(null);
+							$("#phone").val(null);
+							$("#description").val(null);
 							document.getElementById('email-success').style.display = 'block';
 							setTimeout(() => {
 								document.getElementById('email-success').style.display = 'none';

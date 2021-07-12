@@ -31,7 +31,16 @@
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="assets/images/favicon.ico">
 		<!-- Title -->
-		<title>Drash - LTD Company</title>
+		<title>Drash LTD | Certificates</title>
+		<!-- <meta name="title" content="Drash LTD">
+		<meta name="description" content="Drash Company Is working freight forwarding company, air freight, sea freight, customs clearance management operations and conducting formalities relating to imports and exports It also covers the delivery of products both domestically and intern">
+		<meta name="keywords" content="drash ltd, transportation company in erbil, drash"> -->
+		<!-- Open Graph / Facebook -->
+		<!-- <meta property="og:type" content="website"> -->
+		<!-- <meta property="og:url" content="https://metatags.io/"> -->
+		<!-- <meta property="og:title" content="Drash LTD">
+		<meta property="og:description" content="Drash Company Is working freight forwarding company, air freight, sea freight, customs clearance management operations and conducting formalities relating to imports and exports It also covers the delivery of products both domestically and intern">
+		<meta property="og:image" content="/en/images/logo.png"> -->
     </head>
 
     <body>
@@ -126,9 +135,13 @@
 									<ul>
 										<li>
 											<a href="tel:" class="default-btn phone-link">
-												<span>
-													<span class="top-phone"  style="margin-left: -20px;">  </span>
-													<i class="ri-phone-fill"  style="margin-left: -12px;"></i>
+												<span style="padding-left: 20px;">
+													<i class="ri-phone-fill"></i>
+												</span>
+											</a>
+											<a href="mailto:" class="default-btn" id="email-top">
+												<span style="padding-left: 20px;">
+													<i class="ri-mail-line"></i>
 												</span>
 											</a>
 										</li>
@@ -279,7 +292,7 @@
 					$("#address").text(data.address);
 					$(".fb-link").attr('href', data.fb_link);
 					$(".insta-link").attr('href', data.insta_link);
-					$("#email").attr('href', 'mailto:' + data.email);
+					$("#email,#email-top").attr('href', 'mailto:' + data.email);
 					$("#email").text(data.email);
 				});
 

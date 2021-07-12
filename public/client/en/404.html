@@ -160,10 +160,14 @@
 								<div class="others-option justify-content-center d-flex align-items-center">
 									<ul>
 										<li>
-											<a href="tel:" class="default-btn" class="phone-link">
-												<span>
-													<span class="top-phone" style="margin-left: -22px;">  </span>
+											<a href="tel:" class="default-btn phone-link">
+												<span style="padding-left: 20px;">
 													<i class="ri-phone-fill"></i>
+												</span>
+											</a>
+											<a href="mailto:" class="default-btn" id="email-top">
+												<span style="padding-left: 20px;">
+													<i class="ri-mail-line"></i>
 												</span>
 											</a>
 										</li>
@@ -293,7 +297,7 @@
 					$("#address").text(data.address);
 					$(".fb-link").attr('href', data.fb_link);
 					$(".insta-link").attr('href', data.insta_link);
-					$("#email").attr('href', 'mailto:' + data.email);
+					$("#email,#email-top").attr('href', 'mailto:' + data.email);
 					$("#email").text(data.email);
 				});
 

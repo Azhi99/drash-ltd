@@ -991,7 +991,7 @@ Navbar Area Style
   font-family: "Barlow", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  padding: 15px 40px;
+  padding: 10px 10px;
 }
 
 .desktop-nav .navbar .others-options ul li .default-btn span {
@@ -1204,7 +1204,7 @@ Others Option For Responsive Area Style
   font-family: "Barlow", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  padding: 15px 40px;
+  padding: 10px 10px;
 }
 
 .others-option-for-responsive .others-option ul li .default-btn span {
@@ -1340,10 +1340,10 @@ Banner Area Style
   position: relative;
   height: 575px;
   overflow: hidden;
-  background-image: url('/en/images/banner/banner-bg-1.jpg');
+  /* background-image: url('/en/images/banner/banner-bg-1.jpg');
   background-position: right;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; */
 }
 
 .banner-area .shape {

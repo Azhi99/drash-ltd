@@ -186,7 +186,7 @@
 						<div class="row">
 							<div class="col-12">
 								<div class="single-contact-info">
-									<i class="ri-map-pin-fill"></i>
+									<i class="ri-map-pin-fill" style="margin-top: -20px;"></i>
 		
 									<div class="count-title">
 										<p id="top-address"> . </p>
@@ -196,7 +196,7 @@
 		
 							<div class="col-12">
 								<div class="single-contact-info">
-									<i class="ri-phone-fill"></i>
+									<i class="ri-phone-fill my-auto"></i>
 									<div class="count-title" id="phones">
 										
 									</div>
@@ -205,7 +205,7 @@
 		
 							<div class="col-12 offset-lg-0 offset-md-3">
 								<div class="single-contact-info">
-									<i class="ri-mail-fill"></i>
+									<i class="ri-mail-fill my-auto"></i>
 		
 									<div class="count-title">
 										<a href="mailto:" id="email-top"> . </a>
@@ -223,67 +223,55 @@
 		<!-- End Contact Info Area -->
 
 		<!-- Start Request A Quote Area -->
-		<section class="request-quote-area pt-30 pb-40" id="send-en-email">
+		<section class="card shadow-sm py-4 px-2 main-contact-area pb-100" id="send-en-email" style="margin: 1% 25%;">
 			<div class="container">
+				<div class="section-title">
+					<h2>Write us a message</h2>
+				</div>
+				
 				<div class="row">
-					<div class="col-lg-7">
-						<div class="request-quote-img"></div>
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<label class="form-label">Your name</label>
+							<input type="text" class="form-control" id="full-name">
+						</div>
 					</div>
 
-					<div class="col-lg-5">
-						<div class="request-quote-content">
-							<span class="top-title" style="font-size: 21px;">Send an email</span>
-							<h2>Tell us your needs, and our industry experts will respond</h2>
-								
-							<div class="request-quote-from shadow-lg rounded" style="padding-right: 20px;">
-								<div class="row">
-									<div class="col-lg-12 col-sm-12">
-										<div class="form-group">
-											<label class="form-label">Your name</label>
-    										<input type="text" class="form-control" id="full-name">
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-sm-12">
-										<div class="form-group">
-											<label class="form-label">Email address</label>
-    										<input type="email" class="form-control" id="email-address">
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-sm-12">
-										<div class="form-group">
-											<label class="form-label">Phone</label>
-    										<input type="text" class="form-control" id="phone">
-										</div>
-									</div>
-									<div class="col-lg-12 col-sm-12">
-										<div class="form-group">
-											<label class="form-label">Description</label>
-    										<textarea cols="30" rows="6" class="form-control" id="description"></textarea>
-										</div>
-									</div>
-
-								</div>
-
-								<button class="default-btn" id="btn-send">
-									<span>
-										Send an email
-										<i class="ri-send-plane-2-fill"></i>
-
-									</span>
-								</button>
-
-								<div class="alert alert-success mt-2 text-center" id="email-success" style="display: none;">
-									<i class="fa fa-check"></i> &nbsp; Email successfully sent
-								</div>
-
-								<div class="alert alert-danger mt-2 text-center" id="email-failed" style="display: none;">
-									You're recently sent an email
-								</div>
-
-							</div>
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<label class="form-label">Email address</label>
+							<input type="email" class="form-control" id="email-address">
 						</div>
+					</div>
+
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<label class="form-label">Phone</label>
+							<input type="text" class="form-control" id="phone">
+						</div>
+					</div>
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<label class="form-label">Description</label>
+							<textarea cols="30" rows="6" class="form-control" id="description"></textarea>
+						</div>
+					</div>
+
+					<div class="col-lg-12 col-md-12 col-12">
+						<button class="default-btn w-100" id="btn-send">
+							<span>
+								Send an email
+								<i class="ri-arrow-right-circle-line"></i>
+
+							</span>
+						</button>
+					</div>
+					<div class="col-12 alert alert-success mt-2 text-center" id="email-success" style="display: none;">
+						<i class="fa fa-check"></i> &nbsp; Email successfully sent
+					</div>
+
+					<div class="col-12 alert alert-danger mt-2 text-center" id="email-failed" style="display: none;">
+						You're recently sent an email
 					</div>
 				</div>
 			</div>

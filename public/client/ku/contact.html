@@ -225,68 +225,55 @@
 		<!-- End Contact Info Area -->
 
 		<!-- Start Request A Quote Area -->
-		<section class="request-quote-area pt-30 pb-40">
+		<section class="card shadow-sm py-4 px-2 main-contact-area pb-100" id="send-en-email" style="margin: 1% 25%;">
 			<div class="container">
+				<div class="section-title">
+					<h2>پەیامێک بنێرە</h2>
+				</div>
+				
 				<div class="row">
-					<div class="col-lg-7">
-						<div class="request-quote-img"></div>
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<label class="form-label">ناوی تەواو</label>
+							<input type="text" class="form-control" id="full-name">
+						</div>
 					</div>
 
-					<div class="col-lg-5">
-						<div class="request-quote-content">
-							<span class="top-title" style="font-size: 21px;">ئیـمـەیڵ بنێرە</span>
-							<h2>پێویستیەکانت بە ئێمە بڵێ، ئێمەش بۆت دەستەبەر دەکەین</h2>
-								
-							<div class="request-quote-from shadow-lg rounded" style="padding-left: 20px;">
-								<div class="row">
-									<div class="col-lg-12 col-sm-12">
-										<div class="form-group">
-											<label class="form-label">ناوی تەواو</label>
-    										<input type="text" class="form-control" id="full-name">
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-sm-12">
-										<div class="form-group">
-											<label class="form-label">ئیـمـەیڵ</label>
-    										<input type="email" class="form-control" id="email-address">
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-sm-12">
-										<div class="form-group">
-											<label class="form-label">ژمارە تەلەفۆن</label>
-    										<input type="text" class="form-control" id="phone">
-										</div>
-									</div>
-
-									<div class="col-lg-12 col-sm-12">
-										<div class="form-group">
-											<label class="form-label"> ناوەڕۆک </label>
-    										<textarea cols="30" rows="6" class="form-control" id="description"></textarea>
-										</div>
-									</div>
-						
-								</div>
-
-								<button type="submit" class="default-btn" id="btn-send">
-									<span>
-										ئیـمـەیڵ بنێرە
-										&nbsp;
-										<img src="/ku/images/send-plane-2-fill.png" style="filter: brightness(0) invert(1); -webkit-transform: scaleX(-1); transform: scaleX(-1);" alt="Icon">
-									</span>
-								</button>
-
-								<div class="alert alert-success mt-2 text-center" id="email-success" style="display: none;">
-									<i class="fa fa-check" style="font-family: 'Font Awesome 5 Pro' !important;"></i> &nbsp; ئیمەیڵەکە بە سەرکەوتووی نێردرا
-								</div>
-
-								<div class="alert alert-danger mt-2 text-center" id="email-failed" style="display: none;">
-									پێشتر ئەم ئیمەیڵە نێردراوە
-								</div>
-
-							</div>
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<label class="form-label">ئیمەیڵ</label>
+							<input type="email" class="form-control" id="email-address">
 						</div>
+					</div>
+
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<label class="form-label">ژمارە تەلەفۆن</label>
+							<input type="text" class="form-control" id="phone">
+						</div>
+					</div>
+					<div class="col-lg-12 col-sm-12">
+						<div class="form-group">
+							<label class="form-label">ناوەڕۆک</label>
+							<textarea cols="30" rows="6" class="form-control" id="description"></textarea>
+						</div>
+					</div>
+
+					<div class="col-lg-12 col-md-12 col-12">
+						<button class="default-btn w-100" id="btn-send">
+							<span>
+								پەیام بنێرە
+								<img src="/ku/images/arrow-left-circle-line.png">
+
+							</span>
+						</button>
+					</div>
+					<div class="col-12 alert alert-success mt-2 text-center" id="email-success" style="display: none;">
+						<i class="fa fa-check"></i> &nbsp; پەیامەکە بە سەرکەوتووی نێردرا
+					</div>
+
+					<div class="col-12 alert alert-danger mt-2 text-center" id="email-failed" style="display: none;">
+						پێشتر ئەم پەیامە نێردراوە
 					</div>
 				</div>
 			</div>

@@ -107,7 +107,7 @@
 									</li>
 									<li class="nav-item float-right">
 										<a href="/en/" class="nav-link">
-											<img src="/en/images/uk-flag.png" alt="UK flag icon style="margin-top: -2px;"> &nbsp; ENG
+											<img src="/en/images/uk-flag.png" alt="UK flag icon" style="margin-top: -2px;"> &nbsp; ENG
 										</a>
 										
 									</li>
@@ -143,7 +143,7 @@
 													<img src="/ku/images/phone-fill.png" style="filter: brightness(0) invert(1) drop-shadow(0 0 0 white); -webkit-transform: scaleX(-1); transform: scaleX(-1);" alt="Icon" width="20" height="20">
 												</span>
 											</a>
-											<a href="mailto:" class="default-btn" id="email-top">
+											<a href="mailto:" class="default-btn" id="email-top-1">
 												<span style="padding: 0;">
 													<img src="/ku/images/mail-line.png" style="filter: brightness(0) invert(1) drop-shadow(0 0 0 white); -webkit-transform: scaleX(-1); transform: scaleX(-1);" alt="Icon" width="20" height="20">
 												</span>
@@ -163,18 +163,18 @@
 
 		<!-- Start Banner Area -->
 		<div class="container mt-2">
-			<div class="card p-3 shadow-sm rounded row" style="flex-direction: unset; background-color: rgba(248, 249, 250, .9);">
+			<div class="p-3 rounded row" style="flex-direction: unset;">
 				<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
 					<img src="/en/images/logo2.png" alt="Drash" width="90%">
 				</div>
 				<div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 text-center my-auto">
-					<h1 style="font-size: 4.5rem;"> شركة دراش </h1>
+					<h1 style="font-size: 4.5rem; color: #497d8f;"> شركة دراش </h1>
 					<h3> النقل و التخليص الجمركي </h3>
 					<h4> جوي - بحري - بري </h4>
 				</div>
 			</div>
 			<div class="row mt-1">
-				<h1 class="mt-1 pb-2 card shadow-sm text-center col-12" id="satisfication" style="font-size: 92px; background-color: rgba(248, 249, 250, .9);">
+				<h1 class="mt-1 pb-2 text-center col-12" id="satisfication" style="font-size: 92px; font-weight: 600; color: #497d8f;">
 					رضـاكم هـو هـدفـنا
 				</h1>
 			</div>
@@ -182,8 +182,8 @@
 		<!-- End Banner Area -->
 
 		<!-- Start Choose Us Area -->
-		<section class="choose-us-area pt-70 pb-40">
-			<div class="container">
+		<section class="choose-us-area pb-40">
+			<div class="container pt-5">
 				<div class="row">
 					<!-- <div class="col-lg-6">
 						<div class="choose-us-img">
@@ -322,6 +322,52 @@
 		</section>
 		<!-- End Services Area -->
 
+		<!-- Start Contact Info Area -->
+		
+
+		<div class="contact-info-area pt-3 pb-70">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<div class="row">
+							<div class="col-12">
+								<div class="single-contact-info">
+									<i class="ri-map-pin-fill my-auto" style="font-size: 44px"></i>
+		
+									<div class="count-title">
+										<p id="top-address"> . </p>
+									</div>
+								</div>
+							</div>
+		
+							<div class="col-12">
+								<div class="single-contact-info">
+									<i class="ri-phone-fill" style="-webkit-transform: scaleX(-1); transform: scaleX(-1); font-size: 44px;"></i>
+									<div class="count-title" id="phones">
+										
+									</div>
+								</div>
+							</div>
+		
+							<div class="col-12 offset-lg-0 offset-md-3">
+								<div class="single-contact-info">
+									<i class="ri-mail-fill my-auto" style="font-size: 44px;"></i>
+		
+									<div class="count-title">
+										<a href="mailto:" id="email-top"> . </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12">
+						<iframe width="100%" height="94.5%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218.988274762987!2d43.98587828461888!3d36.21547993662778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDEyJzU1LjgiTiA0M8KwNTknMTcuMCJF!5e0!3m2!1sen!2siq!4v1626107475728!5m2!1sen!2siq"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Contact Info Area -->
+
 		<!-- Start Footer Area -->
 		<footer class="footer-area" style="background-color: #e2e8f1; padding-bottom: 15px; padding-top: 35px;">
 			<div class="container-fluid">
@@ -444,11 +490,18 @@
 				axios.get('/contactUs/getContact').then(({data}) => {
 					$(".phone-link").attr('href', 'tel:' + '+964' + data.phones.split(',')[0].slice(1));
 					$(".top-phone,#bottom-phone").text(data.phones.split(',')[0]);
-					$("#address").text(data.address);
+					$("#address,#top-address").text(data.address);
 					$(".fb-link").attr('href', data.fb_link);
 					$(".insta-link").attr('href', data.insta_link);
-					$("#email,#email-top").attr('href', 'mailto:' + data.email);
-					$("#email").text(data.email);
+					$("#email,#email-top, #email-top-1").attr('href', 'mailto:' + data.email);
+					$("#email,#email-top").text(data.email);
+
+					const phones = data.phones.split(',');
+					phones.forEach(phone => {
+						$("#phones").append(`
+							<a href="tel:+964${phone.slice(1)}">${phone}</a>
+						`);
+					});
 				});
 
 			}

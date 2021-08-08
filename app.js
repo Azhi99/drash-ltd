@@ -66,6 +66,9 @@ app.post('/login', (req, res) => {
 app.get('/', (req, res) => {
     return res.sendFile(path.join(__dirname, './public/client/en/index.html'));
 });
+app.get('/sitemap.xml', (req, res) => {
+    return res.sendFile(path.join(__dirname, './sitemap.xml'));
+});
 
 app.get('/isLogged', (req, res) => {
     const token = (req.headers.authorization || '').split(' ')[1];

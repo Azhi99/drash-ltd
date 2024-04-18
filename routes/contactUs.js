@@ -22,7 +22,7 @@ const router = express.Router()
 router.patch('/updateContact/:cu_id', checkAuth, async(req,res) => {
     try {
         await db('tbl_contact_us').where('cu_id', req.params.cu_id).update({
-            phone: req.body.phone,
+            phones: req.body.phones,
             address: req.body.address,
             email: req.body.email,
             fb_link: req.body.fb_link || null,
